@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Oferta</title>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type='image/x-icon' href="../img/logo-naturalmente-favicon.png" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/produtos.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/modal-login.css">
+    <link rel="stylesheet" href="../css/modal-sacola.css">
+    <link rel="stylesheet" href="../css/menu-admin.css">
+    <link rel="stylesheet" href="../css/scrollbar.css"> 
+    <link rel="stylesheet" href="../css/colab-barra-fixa.css">
+    <link rel="stylesheet" href="../css/colab-coluna-esquerda.css">
+    <link rel="stylesheet" href="../css/colab-coluna-direita.css">
+    <link rel="stylesheet" href="../css/colab-coluna-principal.css">
+    <link rel="stylesheet" href="../css/oferta-coluna-principal.css">
+  </head>
+
+    <body>  
+      <header class="header">
+        <!-- menu adiministrador -->
+        <nav class="menu-admin">
+            <ul class="menu-admin-lista">
+                <a href="./home.html"><img class="menu-admin-icon" src="../img/logo-naturalmente-icon.png"></a>
+                  <li class="menu-admin-item">
+                    <button class="menu-admin-botao">Compra</button>
+                      <ul class="menu-admin-sublist">
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Nova compra</a></li>
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Compras do dia</a></li>
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Histórico</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Oferta</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="./nova-oferta.html" class="menu-admin-link">Nova oferta</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Oferta do dia</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Histórico</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Pedido</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo pedido</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Pedidos do dia</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Histórico</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Produto</button>
+                      <ul class="menu-admin-sublist">
+                          <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo produto</a></li>
+                          <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Produtos</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Cliente</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo cliente</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Clientes</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Fornecedor</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo fornecedor</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Fornecedores</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Colaborador</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo auxiliar</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo entregador</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Colaboradores</a></li>
+                     </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Entrega</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo bairro</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Bairros atendidos</a></li>
+                      </ul>
+                  </li>
+                </ul>
+                <div class="menu-admin-icon-perfil">
+                  <img class="perfil-icon-img" src="../img/perfil-icon.png">
+                  <ul class="menu-admin-sublist-perfil">
+                    <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Editar dados</a></li>
+                    <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Sair</a></li>
+                  </ul>
+                </div>
+          </nav>
+
+          <!-- barra fixa -->
+          <div class="fixo-colab-container">
+            <div class="titulo-pagina-colab">
+              <p id="tituloColabPage">NOVA OFERTA</p>
+            </div>  
+            <div class="fixo-colab-busca">
+              <input placeholder="Busca">
+              <button><img src="../img/serach-icon.png"></button>
+            </div>
+          </div>
+          
+          <!-- coluna da esquerda - compras fornecedor -->
+          <div class="coluna-esquerda">
+            <table class="compra-fornecedor">
+              <tr>
+                <th colspan="3">Compras disponíveis</th>
+              </tr>
+              <tr>
+                <td>
+                    <input type="checkbox" id="compra1">
+                    <label for="compra1">Sítio do João</label>
+                </td>
+                <td>20/10/2020</td>
+                <td><img class="edit-img-esq" src="../img/edit-icon.png"></td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="checkbox" id="compra1">
+                    <label for="compra1">Fazenda Dona Rosa</label>
+                </td>
+                <td>20/10/2020</td>
+                <td><img class="edit-img-esq" src="../img/edit-icon.png"></td>
+              </tr>
+              <tr>
+                <td>
+                    <input type="checkbox" id="compra1">
+                    <label for="compra1">Beto & Flor</label>
+                </td>
+                <td>20/10/2020</td>
+                <td><img class="edit-img-esq" src="../img/edit-icon.png"></td>
+              </tr>
+            </table>
+            <button class="botao nova-compra-botao">NOVA OFERTA</button>
+          </div>
+
+          <!-- coluna da direita - dados compra -->
+          <div class="coluna-direita">
+            <div class="dados-compra-editar-btn">
+              <div class="edit-img"><img src="../img/edit-icon.png"></div>
+              <div class="edit-img"><img src="../img/delete-icon-2.png"></div>
+            </div>
+            <table class="dados-compra">
+              <tr>
+                <th colspan="3">Dados da Oferta</th>
+              </tr>
+            
+              <tr>
+                <td>Início</td>
+                <td><input id="horaCompra" placeholder="09:00"></td>
+                <td><input id="dataCompra" placeholder="17/10/2020"></td>
+              </tr>
+           
+              <tr>
+                <td colspan="2">Margem geral</td>
+                <td><input id="horaCompra" placeholder="35%"></td>
+              </tr>
+           
+              <tr>
+                <td colspan="2">Status:</td>
+                <td>Off-line</td>
+              </tr>
+              <tr>
+                <td colspan="2">Custo total:</td>
+                <td class="total">R$2.556,58</td>
+              </tr>
+              <tr>
+                <td colspan="2">Preço total:</td>
+                <td class="total">R$3.556,58</td>
+              </tr>
+            </table>
+            <button class="botao concluir-compra-botao">SALVAR OFERTA</button>
+          </div>
+
+          <!-- coluna central - itens oferta -->
+          <div class="coluna-principal">
+            <table class="oferta-produto compra-produto">
+              <tr>
+                <th colspan="3">Item</th>
+                <th>Quant</th>
+                <th>Custo</th>
+                <th>%</th>
+                <th>Preço</th>
+                <th>Un Venda</th>
+                <th>Data</th>
+                <th>Fornecedor</th>
+              </tr>
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr>   
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr>   
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr>     
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr> 
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><button class="add-produto-button-off">=</button></td>
+                <td>20 kg</td>
+                <td>R$ 5,90</td>
+                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>R$ 3,98</td>
+                <td>500 g</td>
+                <td>20/11/2020</td>
+                <td>Sítio do João</td>
+              </tr>                  
+            </table>
+          </div>
+
+        </header>
+    </body>
+
+    <script src="../js/add-produto-input.js"></script>

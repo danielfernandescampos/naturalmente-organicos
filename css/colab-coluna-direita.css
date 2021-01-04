@@ -1,0 +1,106 @@
+.coluna-direita {
+    position: fixed;
+    display: block;
+    overflow-y: scroll;
+    color: grey;
+    width: 250px;
+    top: 80px;
+    height: 100%;
+    right: 0;
+    border-left: 2px solid #9ec2969c;
+
+}
+
+@media only screen and (min-width: 1500px) {
+    .coluna-direita {
+        width: 280px;
+    }
+}
+
+.dados-compra {
+    position: fixed;
+    border-collapse: collapse;
+    width: 250px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 1500px) {
+    .dados-compra {
+        width: 280px;
+    }
+}
+
+.dados-compra th {
+    background-color:#f4f4f4;
+    height: 30px;
+    vertical-align: middle;
+    padding-left: .8rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.dados-compra td:nth-child(2) {
+    text-align: right;
+}
+
+/* .dados-compra tr:nth-child(even){background-color: #f2f2f2;}
+:hover {background-color: #ddd;} */
+
+.dados-compra td {
+    font-size: .9rem;
+    padding: .8rem;
+}
+
+#selectFornecedor {
+    width: 120px;
+}
+
+#horaCompra, #dataCompra{
+    width: 70px;
+    text-align: center;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.concluir-compra-botao {
+    background-color:#75a96a;
+    font-size: 1rem;
+    padding: 0 1rem 0 1rem;
+    position: absolute;
+    bottom: 120px;
+    transform: translate(-50%, -50%);
+}
+
+.concluir-compra-botao:hover {
+    background-color:#84c078;    
+}
+
+.concluir-compra-botao:active {
+    background-color:#75a96a;
+}
+
+#dataCompra, #horaCompra {
+    padding: .2rem;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(240, 240, 240);
+    text-align: center;
+}
+
+.dados-compra-editar-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 30px;
+}
+
+.edit-img {
+    margin: .1rem;
+    margin-top: .25rem;
+    cursor: pointer;
+    opacity: .5;
+}

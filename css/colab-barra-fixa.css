@@ -1,0 +1,74 @@
+.fixo-colab-container {
+    position: fixed;
+    display: flex;
+    align-items:center;
+    background-color:#9ec296;
+    top: 40px;
+    height: 36px;
+    width: 100%;
+    color: white;
+    padding-left: .8rem;
+    border-bottom: 4px solid #75a96a;
+
+}
+
+.titulo-pagina-colab {
+    display: flex;
+    position: relative;
+    top: 2px;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    background-color: #75a96a;
+    height: 32px;
+    width: calc(250px - 2.8rem);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+@media only screen and (min-width: 1500px) {
+    .titulo-pagina-colab {
+        font-size: 1.2rem;
+        width: calc(280px - 2.8rem);
+    }
+}
+
+#tituloColabPage {
+    position: relative;
+    top: 2px;
+}
+
+.fixo-colab-busca {
+    height: 30px;
+    display: flex;
+    margin: 0 3rem 0 3rem;
+    width: calc(100% - 500px - 6rem);
+}
+
+@media only screen and (min-width: 1500px) {
+    .fixo-colab-busca {
+        width: calc(100% - 559px - 6rem);
+    }
+}
+
+.fixo-colab-busca input {
+    flex-grow: 1;
+    padding-left: 1rem;
+    outline: none;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.fixo-colab-busca button {
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border:none;
+    cursor: pointer;
+    outline: none;
+}

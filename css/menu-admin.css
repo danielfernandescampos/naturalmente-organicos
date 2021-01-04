@@ -1,0 +1,99 @@
+.menu-admin-desativado {
+    display: none;
+}
+
+.menu-admin {
+    display: block;
+    background-color:#75a96a;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+    height: 40px;
+}
+
+.menu-admin-icon {
+    cursor: pointer;
+    margin: 0 .1rem 0 .5rem;
+}
+
+.menu-admin-lista {
+    display: flex;
+    align-items: center;
+}
+
+.menu-admin-item {
+    position: relative;
+}
+
+.menu-admin-icon-perfil {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.menu-admin-botao {
+    cursor: default;
+    background-color:#75a96a;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: 0 .5rem;
+    height: 2.5rem;
+}
+
+.menu-admin-botao:hover {
+    background: #699b60;   
+}
+
+.menu-admin-sublist {
+    display: none;
+    position: absolute;
+    background-color: white;
+    font-size: 1rem;
+    z-index: 2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    width: 10rem;
+    text-align: left;
+}
+
+.menu-admin-item:hover > .menu-admin-sublist {
+    display: block;
+}
+.menu-admin-sublist-perfil {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    font-size: 1rem;
+    z-index: 2;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    width: 10rem;
+    text-align: left;
+}
+
+.menu-admin-icon-perfil:hover > .menu-admin-sublist-perfil {
+    display: block;
+} 
+
+.menu-admin-subitem {
+    padding: .5rem 1rem;
+}
+
+.menu-admin-subitem:hover {
+    background-color: #eeeeee;
+}
+
+.menu-admin-link {
+    color: rgb(92, 92, 92);
+    text-decoration: none;
+}
+
+.perfil-icon-img {
+    /*position: relative;*/
+    right: 10px;
+    cursor:pointer;
+}

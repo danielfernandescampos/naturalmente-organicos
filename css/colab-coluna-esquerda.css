@@ -1,0 +1,78 @@
+
+.coluna-esquerda {
+    position: fixed;
+    display: block;
+    overflow-y: scroll;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    top: 80px;    
+    color: grey;
+}
+
+@media only screen and (min-width: 1500px) {
+    .coluna-esquerda {
+        width: 280px;
+    }
+}
+
+.compra-fornecedor {
+    position: fixed;
+    border-collapse: collapse;
+    text-align: left;
+    width: 250px;
+}
+
+@media only screen and (min-width: 1500px) {
+    .compra-fornecedor {
+        width: 280px;
+    }
+}
+
+.compra-fornecedor th {
+    background-color:#f4f4f4;
+    height: 30px;
+    vertical-align: middle;
+    padding-left: .8rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.compra-fornecedor td:nth-child(2) {
+    text-align: right;
+}
+
+.compra-fornecedor td {
+    font-size: .9rem;
+    padding: .8rem;
+}
+
+.compra-fornecedor tr:hover {
+    cursor: pointer;
+}
+
+.compra-fornecedor-selecionada {
+    font-weight: 600;
+}
+
+.nova-compra-botao {
+    background-color:#75a96a;
+    font-size: 1rem;
+    padding: 0 1rem 0 1rem;
+    position: absolute;
+    bottom: 120px;
+    transform: translate(-50%, -50%);
+}
+
+.nova-compra-botao:hover {
+    background-color:#84c078;
+}
+
+.nova-compra-botao:active {
+    background-color:#75a96a;    
+}
+    
+.edit-img-esq {
+    margin-top: .3rem;
+    cursor: pointer;
+    opacity: .35;
+}

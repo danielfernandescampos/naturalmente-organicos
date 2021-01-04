@@ -1,0 +1,103 @@
+.modal-login-desativado {
+    display: none;
+}
+
+.modal-overlay-desativado {
+    display: none;
+}
+
+.modal-login {
+    font-family: sans-serif;
+    display: block;
+    position: fixed;
+    text-align: center;
+    color: gray;
+    width: 300px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: .2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1;
+}
+
+.entrar-titulo {
+    font-size: 2rem;
+    color: #87ae87;
+    margin: 1rem 0 2rem 0;
+}
+
+.entrar-input {
+    width: 80%;
+    outline: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: .5rem;
+    color:gray;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+    
+}
+
+.entrar-input::placeholder {
+    color: lightgray;
+}
+
+.botao {
+    background-color: #87ae87;
+    color: white;
+    height: 3rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.entrar-botao {
+    width: 10rem;  
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    margin: 1rem 0 1.2rem 0;
+}
+
+.botao:hover {
+    background-color: #7c9e7c;
+}
+
+.botao:active {
+    background-color: #87ae87;
+}
+
+.cadastro-botao {
+    text-decoration: none;
+    color: #87ae87;
+    font-weight: 600;
+}
+
+.login-linha {
+    background-color: #7c9e7c;
+    border-top: 1px solid green;
+    margin: 1rem;
+}

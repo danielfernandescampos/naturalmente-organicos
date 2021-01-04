@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Compra</title>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type='image/x-icon' href="../img/logo-naturalmente-favicon.png" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/produtos.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/modal-login.css">
+    <link rel="stylesheet" href="../css/modal-sacola.css">
+    <link rel="stylesheet" href="../css/menu-admin.css">
+    <link rel="stylesheet" href="../css/scrollbar.css"> 
+    <link rel="stylesheet" href="../css/colab-barra-fixa.css">
+    <link rel="stylesheet" href="../css/colab-coluna-esquerda.css">
+    <link rel="stylesheet" href="../css/colab-coluna-direita.css">
+    <link rel="stylesheet" href="../css/colab-coluna-principal.css">
+  </head>
+
+    <body>  
+      <header class="header">
+        <!-- menu adiministrador -->
+        <nav class="menu-admin">
+            <ul class="menu-admin-lista">
+                <a href="./home.html"><img class="menu-admin-icon" src="../img/logo-naturalmente-icon.png"></a>
+                  <li class="menu-admin-item">
+                    <button class="menu-admin-botao">Compra</button>
+                      <ul class="menu-admin-sublist">
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Nova compra</a></li>
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Compras do dia</a></li>
+                          <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Histórico</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Oferta</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="./nova-oferta.html" class="menu-admin-link">Nova oferta</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Oferta do dia</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Histórico</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Pedido</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo pedido</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Pedidos do dia</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Histórico</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Produto</button>
+                      <ul class="menu-admin-sublist">
+                          <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo produto</a></li>
+                          <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Produtos</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Cliente</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo cliente</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Clientes</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Fornecedor</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo fornecedor</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Fornecedores</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Colaborador</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo auxiliar</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo entregador</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Colaboradores</a></li>
+                     </ul>
+                  </li>
+                  <li class="menu-admin-item">
+                      <button class="menu-admin-botao">Entrega</button>
+                      <ul class="menu-admin-sublist">
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Novo bairro</a></li>
+                        <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Bairros atendidos</a></li>
+                      </ul>
+                  </li>
+                </ul>
+                <div class="menu-admin-icon-perfil">
+                  <img class="perfil-icon-img" src="../img/perfil-icon.png">
+                  <ul class="menu-admin-sublist-perfil">
+                    <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Editar dados</a></li>
+                    <li class="menu-admin-subitem"><a href="#" class="menu-admin-link">Sair</a></li>
+                  </ul>
+                </div>
+          </nav>
+
+          <!-- barra fixa -->
+          <div class="fixo-colab-container">
+            <div class="titulo-pagina-colab">
+              <p id="tituloColabPage">COMPRA FORNECEDOR</p>
+            </div>  
+            <div class="fixo-colab-busca">
+              <input placeholder="Busca">
+              <button><img src="../img/serach-icon.png"></button>
+            </div>
+          </div>
+          
+          <!-- coluna da esquerda - compras fornecedor -->
+          <div class="coluna-esquerda">
+            <table class="compra-fornecedor">
+              <tr>
+                <th colspan="2">Compras disponíveis</th>
+              </tr>
+              <tr>
+                <td>Sítio do João</td>
+                <td>20/10/2020</td>
+              </tr>
+              <tr>
+                <td>Fazenda Dona Rosa</td>
+                <td>21/10/2020</td>
+              </tr>
+              <tr>
+                <td>Beto & Flor</td>
+                <td>22/10/2020</td>
+              </tr>
+              <tr class="compra-fornecedor-selecionada">
+                <td>Nova Compra</td>
+                <td>25/12/2020</td>
+              </tr>
+            </table>
+            <button class="botao nova-compra-botao">NOVA COMPRA</button>
+          </div>
+
+          <!-- coluna da direita - dados compra -->
+          <div class="coluna-direita">
+            <div class="dados-compra-editar-btn">
+              <div class="edit-img"><img src="../img/edit-icon.png"></div>
+              <div class="edit-img"><img src="../img/delete-icon-2.png"></div>
+            </div>
+            <table class="dados-compra">
+              <tr>
+                <th colspan="2">Dados da Compra</th>
+              </tr>
+              <tr>
+                <td>Fornecedor:</td>
+                <td>
+                  <select id="selectFornecedor">
+                    <option>Sítio do João</option>
+                    <option>Fazenda Dona Rosa</option>
+                    <option>Beto & Flor</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Data:</td>
+                <td><input id="dataCompra" placeholder="17/10/2020"></td>
+              </tr>
+              <tr>
+                <td>Hora:</td>
+                <td><input id="horaCompra" placeholder="09:45"></td>
+              </tr>
+              <tr>
+                <td>Status:</td>
+                <td>Não publicada</td>                
+              </tr>
+              <tr>
+                <td>Total:</td>
+                <td class="total">R$2.556,58</td>
+              </tr>
+            </table>
+            <button class="botao concluir-compra-botao">CONCLUIR</button>
+          </div>
+
+          <!-- coluna central - itens compra -->
+          <div class="coluna-principal">
+            <table class=compra-produto>
+              <tr>
+                <th colspan="2">Item</th>
+                <th>Quant</th>
+                <th>Custo</th>
+                <th>Total</th>
+                <th colspan="2"></th>
+              </tr>
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><input class="compra-produto-input" placeholder="10kg"></td>
+                <td><input class="compra-produto-input" placeholder="R$50,00"></td>
+                <td>R$ 50,00</td>
+                <td><button class="add-produto-button-off">Adicionar</button></td>
+                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
+              </tr>
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><input class="compra-produto-input" placeholder="10kg"></td>
+                <td><input class="compra-produto-input" placeholder="R$50,00"></td>
+                <td>R$ 50,00</td>
+                <td><button class="add-produto-button-off">Adicionar</button></td>
+                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
+              </tr>
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><input class="compra-produto-input" placeholder="10kg"></td>
+                <td><input class="compra-produto-input" placeholder="R$50,00"></td>
+                <td>R$ 50,00</td>
+                <td><button class="add-produto-button add-produto-button-off">Adicionar</button></td>
+                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
+              </tr>                           
+            </table>
+            <div class="add-produto">
+              <p>Novo Item</p>
+              <input id="addProduto" placeholder="Pesquise um produto">
+              <div id="inputDiv" class="add-produto-off add-produto-resultado">
+                <p>Batata Baroa</p>
+                <p>Batata Doce</p>
+                <p>Batata Inglesa</p>
+              </div>
+            </div>
+          </div>
+
+        </header>
+    </body>
+
+    <script src="../js/add-produto-input.js"></script>
