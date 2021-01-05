@@ -2,9 +2,7 @@
     display:none;
 }*/
 
-.modal-sacola {
-    overflow-y: scroll;
-    display: block;
+.modal-sacola {    
     position: fixed;
     font-family: sans-serif;
     top: 0;
@@ -22,7 +20,7 @@
 .sacola__container-header {
     display:flex;
     align-items: center;
-    margin: 1rem 0 0 2rem;
+    margin: 1rem 0 .8rem 2rem;
 }
 
 .sacola__titulo {
@@ -31,35 +29,77 @@
     color:rgb(77, 77, 77);
 }
 
+.sacola__delete {
+    position: absolute;
+    right: 10px;
+    opacity: .4;
+    cursor: pointer;
+}
+
 .sacola-linha {
-    margin-bottom: 1.5rem;;
+    margin: 0;
+}
+
+.sacola__container-produtos {
+    height: 300px;    
+    overflow-y: scroll;
+    height: calc(100% - 100px - 1.8rem - 2.5rem);
+   
 }
 
 .produto__sacola {
     display: flex;
     align-items: center;
-    margin: 1.5rem 0 1.5rem 1.5rem;;
+    padding: 1rem 0 1rem 1.5rem;;
+    border-bottom: 1px solid rgb(240, 240, 240);
 }
 
 .produto__info--container {
-    padding: 0 2rem;
-   /*border: 1px solid rgb(214, 214, 214);*/
+    /*padding: 0 2rem;*/
+    position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content:space-evenly;
+   height: 60px;
+   padding: 0 1.5rem 0 1.2rem;
+   width: 150px;
 }
 
-.produto__titulo{
-    padding-bottom: 1rem;
+.produto__sacola-comandos {
+    display: flex;
+    align-items: center;
+}
+
+.produto__delete {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.produto__titulo {
+    /*padding-bottom: 1rem;*/
 }
 
 .produto__preco--container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+    height: 60px;
     right: 0;
-    padding: 0 2rem;
+    padding: 0 1.2rem 0 1.5rem;
     text-align: center;
+    border-left: 1px solid rgb(240, 240, 240);
     /*border: 1px solid rgb(214, 214, 214);*/
 }
 
 .produto__sacola-quantidade {
     width: 50px;
+}
+
+.produto__sacola-unidade {
+    padding: 0;
 }
 
 .produto__sacola-preco {
@@ -74,17 +114,25 @@
 }
 
 .finalizar-container {
-   text-align: center;
-   width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgb(240, 240, 240);
 }
 
 .pedido-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    margin-bottom: 1rem;
+    height: 50px;
 }
 
 .finalizar-pedido-botao {
    width: 100%;
+   height: 50px;
    background-color:#75a96a;
    margin:none;
 }
