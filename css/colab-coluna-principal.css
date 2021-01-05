@@ -98,7 +98,7 @@
 }
 
 .add-produto-resultado {
-    display: block;
+    display: none;
     width: 100%;
     margin-top: .5rem;
     background: rgb(248, 248, 248);
@@ -106,7 +106,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.add-produto-resultado p {
+.add-produto-resultado li {
     /*margin-left: 1.2rem;*/
     margin: 0;
     padding: .8rem 0 .8rem 1.2rem;
@@ -116,9 +116,22 @@
     /*padding: .5rem 0 .5rem 1.2rem;*/
 }
 
-.add-produto-resultado p:hover {
+.add-produto-resultado li:hover {
     background-color: #9ec296;
     font-weight: 500;
+    color: white;
+}
+
+.add-produto-resultado li:hover > a {
+    color: white;
+}
+
+.add-produto-resultado a {
+    text-decoration: none;
+    color: grey;
+}
+
+.add-produto-resultado a:hover {
     color: white;
 }
 

@@ -170,12 +170,12 @@
                 <td class="total">R$2.556,59</td>
               </tr>
             </table>
-            <button class="botao concluir-compra-botao">CONCLUIR</button>
+            <button id="concluirCompra" class="botao concluir-compra-botao">CONCLUIR</button>
           </div>
 
           <!-- coluna central - itens compra -->
           <div class="coluna-principal">
-            <table class=compra-produto>
+            <table id="compraProdutoRow" class=compra-produto>
               <tr>
                 <th colspan="2">Item</th>
                 <th>Quant</th>
@@ -209,20 +209,32 @@
                 <td>R$ 50,00</td>
                 <td><button class="add-produto-button add-produto-button-off">Adicionar</button></td>
                 <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
+              </tr>  
+              <tr>
+                <td><img class="compra-produto-img" src="../img/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><input class="compra-produto-input" placeholder="10kg"></td>
+                <td><input class="compra-produto-input" placeholder="R$50,00"></td>
+                <td>R$ 50,00</td>
+                <td><button class="add-produto-button add-produto-button-off">Adicionar</button></td>
+                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
               </tr>                           
             </table>
             <div class="add-produto">
               <p>Novo Item</p>
-              <input id="addProduto" placeholder="Pesquise um produto">
-              <div id="inputDiv" class="add-produto-off add-produto-resultado">
-                <p>Batata Baroa</p>
-                <p>Batata Doce</p>
-                <p>Batata Inglesa</p>
-              </div>
+              <input id="addProduto" type="text" placeholder="Pesquise um produto">
+              <ul id="inputDiv" class="add-produto-resultado">
+                <li class="produtoLista"><a href="#">Batata Baroa</a></li>
+                <li class="produtoLista"><a href="#">Batata Doce</a></li>
+                <li class="produtoLista"><a href="#">Batata Inglesa</a></li>
+              </ul>
             </div>
           </div>
 
         </header>
-    </body>
+        
+        <script src="../js/nova-compra/botao-nova-compra.js"></script>
+        <script src="../js/nova-compra/add-produto-input.js"></script>
 
-    <script src="../js/add-produto-input.js"></script>
+      </body>
+</html>      
