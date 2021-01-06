@@ -43,7 +43,7 @@ li.forEach((item) => {
         var delBtnConteudo = document.createElement ('img');
 
         // adiciona os conteúdos
-        imgConteudo.src = "../img/banana.png";
+        imgConteudo.src = "../img/produtos/banana.png";
         imgConteudo.classList.add("compra-produto-img")
         img.appendChild(imgConteudo);
 
@@ -77,6 +77,12 @@ li.forEach((item) => {
         novoProduto.appendChild(delBtn);
 
         tabela.appendChild(novoProduto);
+
+        input.value = "";
+        ul.style.display = "none";
+
        })
     })
+
+    /*pegar o nome do produto no click, correr o array de objetos comparando e quando achar pegar as informações*/
 
