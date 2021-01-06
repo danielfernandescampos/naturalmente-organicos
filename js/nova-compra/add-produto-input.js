@@ -7,7 +7,7 @@ var li = document.querySelectorAll(".produtoLista");
 // abrindo a busca do input
 input.addEventListener('keyup', function(e){
     if(this.value.length == 0) {ul.style.display = "none";}
-    if( this.value.length < 4 ) return;
+    if( this.value.length < 3 ) return;
     const termoDigitado = e.target.value.toUpperCase();
     Array.from(li).forEach(function(liProduto){
         const nomeProduto = liProduto.textContent;
