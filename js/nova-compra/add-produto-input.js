@@ -50,14 +50,17 @@ li.forEach((item) => {
         nome.textContent = item.textContent;
 
         quantConteudo.classList.add("compra-produto-input")
+        quantConteudo.classList.add("produto-quant")
         quantConteudo.type = "number"
         quant.appendChild(quantConteudo);
 
         custoConteudo.classList.add("compra-produto-input")
+        custoConteudo.classList.add("produto-custo")
         custoConteudo.type = "number"
         custo.appendChild(custoConteudo);
 
-        total.textContent = "0" 
+        total.classList.add("produto-total");
+        total.textContent = "0";
 
         addBtnConteudo.innerHTML = "Adicionar"
         addBtnConteudo.classList.add('add-produto-button')
@@ -75,6 +78,7 @@ li.forEach((item) => {
         novoProduto.appendChild(total);
         novoProduto.appendChild(addBtn);
         novoProduto.appendChild(delBtn);
+        novoProduto.classList.add('produto-tr');
 
         tabela.appendChild(novoProduto);
 
