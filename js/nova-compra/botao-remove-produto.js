@@ -1,17 +1,32 @@
 delIcon = document.querySelectorAll(".delete-icon");
 tabela = document.getElementById("compraProdutoRow");
-       
-//assim deleta no click da última célula e não do botão        
+             
 // não funciona para os novos itens adicionados 
 
-        for(i=1; i < tabela.rows.length; i++) {
-        
-                tabela.rows[i].cells[6].onclick = function(){
+tabela.addEventListener ('click', function(event){
+
+    if(event.target.classList.contains('delete-icon')){
+        event.target.parentElement.parentElement.remove();
+    }
+})
+
+// delIcon.forEach (function(icon){
+//     icon.addEventListener('click', function(){
+//         this.parentElement.parentElement.remove();
+//         //tabela.deleteRow(icon.parentElement.parentElement.rowIndex);
+
+//     })
+
+// });
+
+        // for(i=1; i < tabela.rows.length; i++) {
+
+        //         tabela.rows[i].cells[6].onclick = function(){
                     
-                    rIndex = this.parentElement.rowIndex;
-                    tabela.deleteRow(rIndex);
-                }            
-            }
+        //             rIndex = this.parentElement.rowIndex;
+        //             tabela.deleteRow(rIndex);
+        //         }            
+        //     }
       
 
 
