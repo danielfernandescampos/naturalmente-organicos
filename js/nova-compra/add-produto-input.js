@@ -42,51 +42,61 @@ li.forEach((item) => {
         var delBtn = document.createElement('td');
         var delBtnConteudo = document.createElement ('img');
 
-        // adiciona os conteúdos
-        imgConteudo.src = "../img/produtos/banana.png";
-        imgConteudo.classList.add("compra-produto-img")
-        img.appendChild(imgConteudo);
+        // checa o id do item com o id do json de produtos:
+        // pega data-id do item clicado
+        const idProduto = item.getAttribute('data-id');
+        // correndo array de produtos 
+        produtos.forEach((item) =>{
+            if(idProduto == item.id) {
+                console.log(item.id, item.nome, item.categ)
+                // adiciona os conteúdos através do json ode produtos
+                imgConteudo.src = item.foto;
+                imgConteudo.classList.add("compra-produto-img")
+                img.appendChild(imgConteudo);
+        
+                nome.textContent = item.nome;
+        
+                quantConteudo.classList.add("compra-produto-input")
+                quantConteudo.classList.add("produto-quant")
+                quantConteudo.type = "number"
+                quant.appendChild(quantConteudo);
+        
+                custoConteudo.classList.add("compra-produto-input")
+                custoConteudo.classList.add("produto-custo")
+                custoConteudo.type = "number"
+                custo.appendChild(custoConteudo);
+        
+                total.classList.add("produto-total");
+                total.textContent = "0";
+        
+                addBtnConteudo.innerHTML = "Adicionar"
+                addBtnConteudo.classList.add('add-produto-button')
+                addBtn.appendChild(addBtnConteudo);
+        
+                delBtnConteudo.src = "../img/delete-icon-2.png";
+                delBtnConteudo.classList.add("delete-icon")
+                delBtn.appendChild(delBtnConteudo);
+                  
+                // append os childs td na tr
+                novoProduto.appendChild(img);
+                novoProduto.appendChild(nome);
+                novoProduto.appendChild(quant);
+                novoProduto.appendChild(custo);
+                novoProduto.appendChild(total);
+                novoProduto.appendChild(addBtn);
+                novoProduto.appendChild(delBtn);
+                novoProduto.classList.add('produto-tr');
+        
+                tabela.appendChild(novoProduto);
+            }
+        })
 
-        nome.textContent = item.textContent;
 
-        quantConteudo.classList.add("compra-produto-input")
-        quantConteudo.classList.add("produto-quant")
-        quantConteudo.type = "number"
-        quant.appendChild(quantConteudo);
-
-        custoConteudo.classList.add("compra-produto-input")
-        custoConteudo.classList.add("produto-custo")
-        custoConteudo.type = "number"
-        custo.appendChild(custoConteudo);
-
-        total.classList.add("produto-total");
-        total.textContent = "0";
-
-        addBtnConteudo.innerHTML = "Adicionar"
-        addBtnConteudo.classList.add('add-produto-button')
-        addBtn.appendChild(addBtnConteudo);
-
-        delBtnConteudo.src = "../img/delete-icon-2.png";
-        delBtnConteudo.classList.add("delete-icon")
-        delBtn.appendChild(delBtnConteudo);
-          
-        // append os childs td na tr
-        novoProduto.appendChild(img);
-        novoProduto.appendChild(nome);
-        novoProduto.appendChild(quant);
-        novoProduto.appendChild(custo);
-        novoProduto.appendChild(total);
-        novoProduto.appendChild(addBtn);
-        novoProduto.appendChild(delBtn);
-        novoProduto.classList.add('produto-tr');
-
-        tabela.appendChild(novoProduto);
-
-        input.value = "";
+        input.value = " ";
         ul.style.display = "none";
 
-       })
     })
+})
 
     /*pegar o nome do produto no click, correr o array de objetos comparando e quando achar pegar as informações*/
 

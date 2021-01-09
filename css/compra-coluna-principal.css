@@ -56,7 +56,8 @@
 }
 
 .compra-produto-input {
-    width: 50px;
+    width: 40px;
+    margin: 5px;
 }
 
 .compra-produto td input {

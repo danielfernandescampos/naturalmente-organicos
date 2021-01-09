@@ -186,8 +186,8 @@
               <tr class="produto-tr">
                 <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
                 <td>Banana Prata</td>
-                <td><input type="number" class="produto-quant compra-produto-input" value="10"></td>
-                <td><input type="number" class="produto-custo compra-produto-input" value="50"></td>
+                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10">kg</td>
+                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
                 <td class="produto-total">0</td>
                 <td><button class="add-produto-button-off">Adicionar</button></td>
                 <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
@@ -195,13 +195,22 @@
               <tr class="produto-tr">
                 <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
                 <td>Banana Prata</td>
-                <td><input type="number" class="produto-quant compra-produto-input" value="10"></td>
-                <td><input type="number" class="produto-custo compra-produto-input" value="50"></td>
+                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10">kg</td>
+                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
+                <td class="produto-total">0</td>
+                <td><button class="add-produto-button-off">Adicionar</button></td>
+                <td><img class="delete-icon" src="../img/delete-icon-2.png  "></td>
+              </tr>
+              <tr class="produto-tr">
+                <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
+                <td>Banana Prata</td>
+                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10">kg</td>
+                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
                 <td class="produto-total">0</td>
                 <td><button class="add-produto-button-off">Adicionar</button></td>
                 <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
-              </tr>  
-              <tr class="produto-tr">
+              </tr>
+              <!-- <tr class="produto-tr">
                 <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
                 <td>Banana Prata</td>
                 <td><input type="number" class="produto-quant compra-produto-input" value="10"></td>
@@ -209,7 +218,7 @@
                 <td class="produto-total">0</td>
                 <td><button class="add-produto-button add-produto-button-off">Adicionar</button></td>
                 <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
-              </tr>                           
+              </tr>                            -->
             </table>
             <div class="add-produto">
               <p>Novo Item</p>
@@ -224,11 +233,13 @@
 
         </header>
         
+        <script src="../js/classes/produtos.js"></script>
         <script src="../js/nova-compra/botao-nova-compra.js"></script>
         <script src="../js/helpers/populador-produtos.js"></script>
         <script src="../js/nova-compra/add-produto-input.js"></script>
         <script src="../js/nova-compra/botao-remove-produto.js"></script>
         <script src="../js/helpers/calcula-custo-total.js"></script>
+
         
       </body>
 </html>      

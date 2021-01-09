@@ -11,7 +11,7 @@ function calculaCustoParcial () {
         var custo = each.querySelector('.produto-custo');
         var total = each.querySelector('.produto-total');
         var custoTotal = quant.value * custo.value;
-        total.textContent = `${custoTotal}`;
+        total.textContent = Math.round(custoTotal * 100) / 100; /*custoTotal.toFixed(2);*/
     })
 }
 
@@ -30,18 +30,6 @@ tabelaProdutos.addEventListener ('keyup', function(event){
         calculaCustoTotal();
     }
 })
-// input.forEach (function(each) {    
-//     each.addEventListener('keyup',calculaCustoParcial)
-// })
-// input.forEach (function(each) {    
-//     each.addEventListener('click',calculaCustoParcial)
-// })
-// input.forEach (function(each) {    
-//     each.addEventListener('keyup', calculaCustoTotal)
-// })
-// input.forEach (function(each) {    
-//     each.addEventListener('click',calculaCustoTotal)
-// })
 
 // calculando o total geral
 var tabelaDados = document.querySelector('.dados-compra');
@@ -55,7 +43,6 @@ function calculaCustoTotal (){
     })
     totalGeral.textContent = `R$ ${arrayTotais.reduce((a, b) => a + b, 0)}`
 }
-
 
 calculaCustoParcial();
 calculaCustoTotal();
