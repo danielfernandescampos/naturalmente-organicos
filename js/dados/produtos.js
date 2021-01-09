@@ -1,4 +1,5 @@
-//recebo isso do backend
+// recebido pelo back do banco de dados
+// feito aqui apenas para testar o front
 const produtos = [
     {
         id: 01,
@@ -245,7 +246,7 @@ const produtos = [
         nome: "Banana prata",
         categ: "Fruta",
         foto: "../img/produtos/banana.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -253,7 +254,7 @@ const produtos = [
         nome: "Abacate",
         categ: "Fruta",
         foto: "../img/produtos/abacate.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -261,7 +262,7 @@ const produtos = [
         nome: "Laranja",
         categ: "Fruta",
         foto: "../img/produtos/abacate.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -285,7 +286,7 @@ const produtos = [
         nome: "Maçã",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -293,15 +294,7 @@ const produtos = [
         nome: "Limão",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
-        unVenda: .5,
-    },
-    {
-        id: 37,
-        nome: "Limão",
-        categ: "Fruta",
-        foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -309,7 +302,7 @@ const produtos = [
         nome: "Maracujá",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -317,7 +310,7 @@ const produtos = [
         nome: "Manga",
         categ: "Fruta",
         foto: "../img/produtos/manga.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -333,7 +326,7 @@ const produtos = [
         nome: "Morango",
         categ: "Fruta",
         foto: "../img/produtos/morango.png",
-        unTipo: "Un",
+        unTipo: "Cx",
         unVenda: 1,
     },
     {
@@ -341,15 +334,15 @@ const produtos = [
         nome: "Tangerina",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
-        unVenda: 1,
+        unTipo: "Kg",
+        unVenda: .5,
     },
     {
         id: 43,
         nome: "Goiaba",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -357,7 +350,7 @@ const produtos = [
         nome: "Mamão",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {
@@ -365,7 +358,7 @@ const produtos = [
         nome: "Jabuticaba",
         categ: "Fruta",
         foto: "../img/produtos/sem-foto.png",
-        unTipo: "Un",
+        unTipo: "Kg",
         unVenda: 1,
     },
     {

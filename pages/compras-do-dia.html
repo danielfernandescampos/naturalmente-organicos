@@ -30,7 +30,7 @@
                     <button class="menu-admin-botao">Compra</button>
                       <ul class="menu-admin-sublist">
                           <li id="novaCompraMenu" class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Nova compra</a></li>
-                          <li id="comprasDiaMenu" class="menu-admin-subitem"><a href="./compras-do-dia.html" class="menu-admin-link">Compras do dia</a></li>
+                          <li id="comprasDiaMenu" class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Compras do dia</a></li>
                           <li class="menu-admin-subitem"><a href="./nova-compra.html" class="menu-admin-link">Histórico</a></li>
                       </ul>
                   </li>
@@ -168,39 +168,7 @@
                 <th>Total</th>
                 <th></th>
               </tr>
-              <tr class="produto-tr">
-                <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
-                <td>Banana Prata</td>
-                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10">kg</td>
-                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
-                <td class="produto-total">0</td>
-                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
-              </tr>
-              <tr class="produto-tr">
-                <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
-                <td>Banana Prata</td>
-                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10"><label>kg</label></td>
-                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
-                <td class="produto-total">0</td>
-                <td><img class="delete-icon" src="../img/delete-icon-2.png  "></td>
-              </tr>
-              <tr class="produto-tr">
-                <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
-                <td>Banana Prata</td>
-                <td><input type="number" min="0" class="produto-quant compra-produto-input" value="10">kg</td>
-                <td>R$<input type="number" min="0" step="any" class="produto-custo compra-produto-input" value="50"></td>
-                <td class="produto-total">0</td>
-                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
-              </tr>
-              <!-- <tr class="produto-tr">
-                <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
-                <td>Banana Prata</td>
-                <td><input type="number" class="produto-quant compra-produto-input" value="10"></td>
-                <td><input type="number" class="produto-custo compra-produto-input" value="50"></td>
-                <td class="produto-total">0</td>
-                <td><button class="add-produto-button add-produto-button-off">Adicionar</button></td>
-                <td><img class="delete-icon" src="../img/delete-icon-2.png"></td>
-              </tr>                            -->
+              
             </table>
             <div class="add-produto">
               <p>Novo Item</p>
@@ -217,13 +185,13 @@
         
         <script src="../js/dados/produtos.js"></script>
         <script src="../js/dados/compras.js"></script>
-        <script src="../js/helpers/populador-compras.js"></script>
         <script src="../js/nova-compra/botao-nova-compra.js"></script>
-        <script src="../js/nova-compra/abertura-nova-compra.js"></script>
         <script src="../js/helpers/populador-produtos.js"></script>
+        <script src="../js/helpers/populador-compras.js"></script>
+        <script src="../js/helpers/calcula-custo-total.js"></script>
+        <script src="../js/nova-compra/abertura-compras-dia.js"></script>
         <script src="../js/nova-compra/add-produto-input.js"></script>
         <script src="../js/nova-compra/botao-remove-produto.js"></script>
-        <script src="../js/helpers/calcula-custo-total.js"></script>
         <script src="../js/nova-compra/click-compra.js"></script>
         <script src="../js/nova-compra/botao-concluir.js"></script>
 

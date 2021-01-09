@@ -34,11 +34,10 @@ li.forEach((item) => {
         var nome = document.createElement('td');
         var quant = document.createElement('td');
         var quantConteudo = document.createElement('input');
+        var quantoLabel = document.createElement('label');
         var custo = document.createElement('td');
         var custoConteudo = document.createElement('input');
         var total = document.createElement('td');
-        var addBtn = document.createElement('td');
-        var addBtnConteudo = document.createElement('button');
         var delBtn = document.createElement('td');
         var delBtnConteudo = document.createElement ('img');
 
@@ -48,33 +47,35 @@ li.forEach((item) => {
         // correndo array de produtos 
         produtos.forEach((item) =>{
             if(idProduto == item.id) {
-                console.log(item.id, item.nome, item.categ)
-                // adiciona os conteúdos através do json ode produtos
+                // adiciona os conteúdos através do json de produtos
                 imgConteudo.src = item.foto;
                 imgConteudo.classList.add("compra-produto-img")
                 img.appendChild(imgConteudo);
         
                 nome.textContent = item.nome;
-        
-                quantConteudo.classList.add("compra-produto-input")
-                quantConteudo.classList.add("produto-quant")
-                quantConteudo.type = "number"
+                
+                quantConteudo.classList.add("compra-produto-input");
+                quantConteudo.classList.add("produto-quant");
+                quantConteudo.type = "number";
+                quantConteudo.min = "0";
+                quantConteudo.step = "any";
                 quant.appendChild(quantConteudo);
+                quantoLabel.textContent = item.unTipo;
+                quant.appendChild(quantoLabel);
         
-                custoConteudo.classList.add("compra-produto-input")
-                custoConteudo.classList.add("produto-custo")
+                custo.textContent = "R$";
+                custoConteudo.classList.add("compra-produto-input");
+                custoConteudo.classList.add("produto-custo");
                 custoConteudo.type = "number"
+                custoConteudo.min = "0";
+                custoConteudo.step = "any";
                 custo.appendChild(custoConteudo);
         
                 total.classList.add("produto-total");
                 total.textContent = "0";
         
-                addBtnConteudo.innerHTML = "Adicionar"
-                addBtnConteudo.classList.add('add-produto-button')
-                addBtn.appendChild(addBtnConteudo);
-        
                 delBtnConteudo.src = "../img/delete-icon-2.png";
-                delBtnConteudo.classList.add("delete-icon")
+                delBtnConteudo.classList.add("delete-icon");
                 delBtn.appendChild(delBtnConteudo);
                   
                 // append os childs td na tr
@@ -83,7 +84,6 @@ li.forEach((item) => {
                 novoProduto.appendChild(quant);
                 novoProduto.appendChild(custo);
                 novoProduto.appendChild(total);
-                novoProduto.appendChild(addBtn);
                 novoProduto.appendChild(delBtn);
                 novoProduto.classList.add('produto-tr');
         
@@ -91,8 +91,7 @@ li.forEach((item) => {
             }
         })
 
-
-        input.value = " ";
+        input.value = "";
         ul.style.display = "none";
 
     })

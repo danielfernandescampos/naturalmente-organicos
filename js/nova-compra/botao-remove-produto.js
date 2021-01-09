@@ -7,6 +7,7 @@ tabela.addEventListener ('click', function(event){
 
     if(event.target.classList.contains('delete-icon')){
         event.target.parentElement.parentElement.remove();
+        calculaCustoTotal();
     }
 })
 

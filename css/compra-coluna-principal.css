@@ -40,6 +40,11 @@
     padding: .8rem;
 }
 
+.compra-produto td:last-child {
+    width: 100px;
+    text-align: end;
+}
+
 .compra-produto-img {
     width: 70px;
     height: 70px;
@@ -167,4 +172,5 @@
 .delete-icon {
     cursor: pointer;
     opacity: .3;
+    margin-right: 1rem;
 }
