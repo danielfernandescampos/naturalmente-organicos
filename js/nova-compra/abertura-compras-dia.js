@@ -1,7 +1,9 @@
 var primeiraCompra = document.querySelector('.compra-tr');
 primeiraCompra.classList.add("compra-fornecedor-selecionada");
+const idCompra = primeiraCompra.getAttribute('data-idcompra');
+var concluirBotao = document.getElementById ('concluirCompra');
 
-const idCompra = primeiraCompra.getAttribute('data-idcompra')
+concluirBotao.style.display = "none" // desabilita o botão concluir
 
             compras.forEach(compra =>{
                 if(idCompra == compra.idCompra){                    
@@ -70,13 +72,25 @@ const idCompra = primeiraCompra.getAttribute('data-idcompra')
                         // pegando nome e foto da tabela de produtos
                         produtos.forEach(produto=>{
                             if(itemCompra.id == produto.id) {
-                                novoProduto.setAttribute('data-idProduto', produto.id);
+                                novoProduto.setAttribute('data-idproduto', produto.id);
                                 nome.textContent = produto.nome;
                                 imgConteudo.src = produto.foto;
                                 quantoLabel.textContent = produto.unTipo;
                             }
                         })
                     })
+
+                    // dados da compra - coluna da direita
+                    // variáveis coluna dados compra
+                    let fornecedorCompra = document.getElementById('selectFornecedor');
+                    let dataCompra = document.getElementById('dataCompra');
+                    let horaCompra = document.getElementById('horaCompra');
+                    let statusCompra = document.getElementById('statusCompra');
+                    // colocando os dados
+                    fornecedorCompra.value = compra.fornecedor;
+                    dataCompra.value = compra.data;
+                    horaCompra.value = compra.hora;
+                    statusCompra.textContent = compra.status;
 
                 } 
             })

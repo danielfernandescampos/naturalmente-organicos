@@ -19,35 +19,35 @@ concluirBtn.addEventListener('click', function(){
         }
     })
     
-    let itensCompra = document.querySelectorAll('.produto-tr');
-    let arrayItensCompra = [];
+    let itensCompraTr = document.querySelectorAll('.produto-tr');
+    let arrayItemCompra = [];
     // pegando as informações dos itens compra
-    itensCompra.forEach(item=>{
+    itensCompraTr.forEach(item=>{
         // pegando cada item da compra
         let quant = item.querySelector('.produto-quant');
         let custo = item.querySelector('.produto-custo');
         let total = item.querySelector('.produto-total');
         let idProduto = item.dataset.idproduto;
+
         // checa se o produto tem
         if(parseInt(total.textContent) != 0) {
-
-            var obj = new Object();
-            obj.id = idProduto;
-            obj.quant  = quant.value;
-            obj.custo  = custo.value;
-            var jsonString = JSON.stringify(obj);
-            arrayItensCompra.push(jsonString);
+            // criando o json com os dados da compra
+            var itemCompra = new Object();
+            itemCompra.id = idProduto;
+            itemCompra.quant  = quant.value;
+            itemCompra.custo  = custo.value;
+            var jsonString = JSON.stringify(itemCompra);
+            arrayItemCompra.push(jsonString);
         } 
-    })
-
-    console.log(arrayItensCompra);
-
-    // pegando as informações da coluna dados da compra
-
+    })    
+    var compra = new Object();
+    compra.fornecedor = fornecedorCompra.value;
+    compra.data = dataCompra.value;
+    compra.itensCompra = arrayItemCompra;
+    console.log(compra);
 
     // criando a tr com o nome da nova compra na coluna compras
     
-    // criando o json com os dados da compra
     /*{
         idCompra: 01,
         fornecedor: "Sítio do João",
@@ -61,7 +61,5 @@ concluirBtn.addEventListener('click', function(){
             {id:31, quant:30, custo:7.90}
         ]
     }*/
-
-    // adicionar ao array compras
 
 })

@@ -4,6 +4,10 @@ var botaoNovaCompra = document.querySelector (".nova-compra-botao");
 var tabelaCompras = document.getElementById('compraFornecedorTable');
 var dataCompraDados = document.getElementById('dataCompra');
 var horaCompra = document.getElementById('horaCompra');
+
+/*compraTr.forEach(item=>{
+    console.log(item.dataset.idcompra)
+})*/
 // pegando a data e hora de hoje
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
@@ -25,32 +29,39 @@ horaAtual = h + ":" + m;
 botaoNovaCompra.addEventListener("click", novaCompra)
 
 function novaCompra() {
-    var rowCount = compraProdutoTabela.rows.length;
-    if (rowCount > 1) {
-        // limpando a tabela central
-        limpaTabela();
-        //recontando o rowCount para entrar no else na próxima vez
-        rowCount = compraProdutoTabela.rows.length;
 
-        // criando os elementos na coluna esquerda
-        var novaCompra = document.createElement('tr');
-        var nomeCompra = document.createElement('td')
-        var dataCompra = document.createElement('td')
+    if(checaNovaCompra()==true) {
+        console.log('já tem uma compra em aberto')}
+    
+    else {
+    
+        var rowCount = compraProdutoTabela.rows.length;
+        if (rowCount > 1) {
+            // limpando a tabela central
+            limpaTabela();
+            //recontando o rowCount para entrar no else na próxima vez
+            rowCount = compraProdutoTabela.rows.length;
 
-        // colocando os dados nos elementos
-        nomeCompra.innerHTML = "Nova Compra";
-        dataCompra.innerHTML = diaAtual;
-        dataCompraDados.value = diaAtual;
-        horaCompra.value = horaAtual;
-        novaCompra.setAttribute('data-idcompra', 'nova-compra');
+            // criando os elementos na coluna esquerda
+            var novaCompra = document.createElement('tr');
+            var nomeCompra = document.createElement('td')
+            var dataCompra = document.createElement('td')
 
-        novaCompra.appendChild(nomeCompra);
-        novaCompra.appendChild(dataCompra);
-        tabelaCompras.appendChild(novaCompra);
-        limpaNegrito();
-        limpaInput();
-        novaCompra.classList.add("compra-fornecedor-selecionada");
-        novaCompra.classList.add('compra-tr');
+            // colocando os dados nos elementos
+            nomeCompra.innerHTML = "Nova Compra";
+            dataCompra.innerHTML = diaAtual;
+            dataCompraDados.value = diaAtual;
+            horaCompra.value = horaAtual;
+            novaCompra.setAttribute('data-idcompra', 'nova-compra');
+
+            novaCompra.appendChild(nomeCompra);
+            novaCompra.appendChild(dataCompra);
+            tabelaCompras.appendChild(novaCompra);
+            limpaNegrito();
+            limpaInput();
+            novaCompra.classList.add("compra-fornecedor-selecionada");
+            novaCompra.classList.add('compra-tr');
+        }
     }
 };
 
@@ -82,4 +93,17 @@ function limpaInput() {
     var input = document.getElementById("addProduto");
     input.value = "";
     input.focus();    
+}
+
+// checa se já existe uma "nova-compra"
+function checaNovaCompra() {
+    var temNovaCompra = false;
+    const compraTr = document.querySelectorAll('.compra-tr');
+    compraTr.forEach(item=>{
+        /*console.log(item.getAttribute('data-idcompra'))*/
+        if(item.getAttribute('data-idcompra') == "nova-compra"){
+            temNovaCompra = true;
+        }
+    })
+    return temNovaCompra;
 }

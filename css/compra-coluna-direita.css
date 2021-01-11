@@ -64,6 +64,7 @@
 }
 
 .concluir-compra-botao {
+    display: inline;
     background-color:#75a96a;
     font-size: 1rem;
     padding: 0 1rem 0 1rem;

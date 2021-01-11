@@ -1,15 +1,16 @@
 const compra = tabelaCompras.querySelectorAll('.compra-tr');
 
-compra.forEach(item=>{
-    
-    item.addEventListener('click', function(){
+tabelaCompras.addEventListener ('click', function(event){
+    clickCompra(event.target.parentElement)
+    })
 
+function clickCompra(compraClicada){
         limpaNegrito();
         limpaTabela();
-        item.classList.add("compra-fornecedor-selecionada"); // coloca em negrito
+        compraClicada.classList.add("compra-fornecedor-selecionada"); // coloca em negrito
         
         // confere id com tabela de compras
-        const idCompra = item.getAttribute('data-idcompra')
+        const idCompra = compraClicada.getAttribute('data-idcompra');
 
         // aqui tem que fazer uma request para acessar as compras no banco        
         var xhr = new XMLHttpRequest();
@@ -49,8 +50,7 @@ compra.forEach(item=>{
                         imgConteudo.classList.add("compra-produto-img")
                         img.appendChild(imgConteudo);
                 
-                        //nome.textContent = itemCompra.nome;
-    
+                        //nome.textContent = itemCompra.nome;    
                         quantConteudo.classList.add("compra-produto-input");
                         quantConteudo.classList.add("produto-quant");
                         quantConteudo.type = "number";
@@ -113,7 +113,4 @@ compra.forEach(item=>{
 
             calculaCustoParcial();
             calculaCustoTotal();
-
-    })
-
-})
+}
