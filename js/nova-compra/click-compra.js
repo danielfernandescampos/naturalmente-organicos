@@ -10,6 +10,19 @@ compra.forEach(item=>{
         
         // confere id com tabela de compras
         const idCompra = item.getAttribute('data-idcompra')
+
+        // aqui tem que fazer uma request para acessar as compras no banco        
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "endereço http");
+        xhr.addEventListener('load', function(){
+            if(xhr.status == 200) {
+                var resposta = xhr.responseText; // a resposta vem no formato string
+                var arrayCompras = JSON.parse(resposta) // transformando em json
+                //arrayCompras.forEach (item => {
+                //  adicionaCompra(item)
+            } else{console.log("xmlhttp em desenvolvimento"); console.log(xhr.status)}
+        });
+
             compras.forEach(compra =>{
                 if(idCompra == compra.idCompra){                    
 
@@ -76,6 +89,7 @@ compra.forEach(item=>{
                         // pegando nome e foto da tabela de produtos
                         produtos.forEach(produto=>{
                             if(itemCompra.id == produto.id) {
+                                novoProduto.setAttribute('data-idProduto', produto.id);
                                 nome.textContent = produto.nome;
                                 imgConteudo.src = produto.foto;
                                 quantoLabel.textContent = produto.unTipo;
@@ -83,6 +97,17 @@ compra.forEach(item=>{
                         })
                     })
 
+                    // dados da compra - coluna da direita
+                    // variáveis coluna dados compra
+                    let fornecedorCompra = document.getElementById('selectFornecedor');
+                    let dataCompra = document.getElementById('dataCompra');
+                    let horaCompra = document.getElementById('horaCompra');
+                    let statusCompra = document.getElementById('statusCompra');
+                    // colocando os dados
+                    fornecedorCompra.value = compra.fornecedor;
+                    dataCompra.value = compra.data;
+                    horaCompra.value = compra.hora;
+                    statusCompra.textContent = compra.status;
                 } 
             })
 

@@ -60,6 +60,10 @@
     text-align: left;
 }
 
+.produto-total {
+    font-weight: bold;
+}
+
 .compra-produto-input {
     width: 40px;
     margin: 5px;

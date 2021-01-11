@@ -4,7 +4,7 @@ const compras = [
         fornecedor: "Sítio do João",
         data: "12/05/2020",
         hora: "15:20",
-        status: "Não publicada",
+        status: "Publicada",
         itemCompra: [
             {id:35, quant:25, custo:5.90},
             {id:34, quant:50, custo:2.30},
@@ -14,7 +14,7 @@ const compras = [
     },
     {
         idCompra: 02,
-        fornecedor: "Dona Flor",
+        fornecedor: "Fazenda Dona Rosa",
         data: "28/07/2020",
         hora: "17:37",
         status: "Publicada",
@@ -29,7 +29,7 @@ const compras = [
     },
     {
         idCompra: 03,
-        fornecedor: "Seu João",
+        fornecedor: "Beto & Flor",
         data: "29/07/2020",
         hora: "18:27",
         status: "Publicada",

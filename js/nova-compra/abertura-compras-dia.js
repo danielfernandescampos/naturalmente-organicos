@@ -70,6 +70,7 @@ const idCompra = primeiraCompra.getAttribute('data-idcompra')
                         // pegando nome e foto da tabela de produtos
                         produtos.forEach(produto=>{
                             if(itemCompra.id == produto.id) {
+                                novoProduto.setAttribute('data-idProduto', produto.id);
                                 nome.textContent = produto.nome;
                                 imgConteudo.src = produto.foto;
                                 quantoLabel.textContent = produto.unTipo;

@@ -261,7 +261,7 @@ const produtos = [
         id: 33,
         nome: "Laranja",
         categ: "Fruta",
-        foto: "../img/produtos/abacate.png",
+        foto: "../img/produtos/sem-foto.png",
         unTipo: "Kg",
         unVenda: 1,
     },
