@@ -1,5 +1,9 @@
 function desabilitaEdicao() {
 
+    // desabilitando a adição de novos produtos
+    inputProduto = document.querySelector('.add-produto');
+    inputProduto.style.display = "none"
+
     // desabilitando a combo box de fornecedores
     fornecedor = document.getElementById('selectFornecedor');
     fornecedor.disabled = true
@@ -19,4 +23,10 @@ function desabilitaEdicao() {
     var concluirBotao = document.getElementById ('concluirCompra');
     concluirBotao.style.display = "none" 
     })
+
+    // desabilitanto data e hora
+    dataCompra = document.getElementById('dataCompra');
+    horaCompra = document.getElementById('horaCompra');
+    dataCompra.disabled = true;
+    horaCompra.disabled = true;
 }

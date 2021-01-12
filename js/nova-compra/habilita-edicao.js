@@ -1,5 +1,9 @@
 function habilitaEdicao() {
 
+    // habilitando a adição de novos produtos
+    inputProduto = document.querySelector('.add-produto');
+    inputProduto.style.display = "block"
+
     // habilitando a combo box de fornecedores
     var fornecedor = document.getElementById('selectFornecedor');
     fornecedor.disabled = false
