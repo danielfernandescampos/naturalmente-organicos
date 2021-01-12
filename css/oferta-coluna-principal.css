@@ -3,5 +3,11 @@
 }
 
 .oferta-produto td:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 100%;
+}
+
+@media only screen and (max-width: 1500px) {
+    .oferta-produto td {
+        font-size: .9rem;
+    }
 }
