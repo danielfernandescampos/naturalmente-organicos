@@ -113,4 +113,5 @@ function clickCompra(compraClicada){
 
             calculaCustoParcial();
             calculaCustoTotal();
+            desabilitaEdicao()
 }

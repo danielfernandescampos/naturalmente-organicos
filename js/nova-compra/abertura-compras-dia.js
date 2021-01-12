@@ -1,9 +1,6 @@
 var primeiraCompra = document.querySelector('.compra-tr');
 primeiraCompra.classList.add("compra-fornecedor-selecionada");
 const idCompra = primeiraCompra.getAttribute('data-idcompra');
-var concluirBotao = document.getElementById ('concluirCompra');
-
-concluirBotao.style.display = "none" // desabilita o botão concluir
 
             compras.forEach(compra =>{
                 if(idCompra == compra.idCompra){                    
@@ -97,4 +94,5 @@ concluirBotao.style.display = "none" // desabilita o botão concluir
 
             calculaCustoParcial();
             calculaCustoTotal();
+            desabilitaEdicao()
 

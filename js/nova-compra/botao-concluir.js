@@ -9,6 +9,10 @@ var tabelaCompras = document.getElementById('compraFornecedorTable');
 
 
 concluirBtn.addEventListener('click', function(){
+
+    desabilitaEdicao()
+    
+    var compraSelecionada = document.querySelector('.compra-fornecedor-selecionada')
     
     var tabelaComprasRows = tabelaCompras.querySelectorAll('tr');
     // colocando nome e data na "nova compra" da coluna de compras da esquerda
@@ -41,6 +45,7 @@ concluirBtn.addEventListener('click', function(){
         } 
     })    
     var compra = new Object();
+    compra.idCompra = compraSelecionada.dataset.idcompra;
     compra.fornecedor = fornecedorCompra.value;
     compra.data = dataCompra.value;
     compra.itensCompra = arrayItemCompra;

@@ -1,20 +1,32 @@
 var editarBotao = document.getElementById ('editarCompra');
 var excluirBotao = document.getElementById ('excluirCompra');
-var concluirBotao = document.getElementById ('concluirCompra');
-var produtoInputs = document.querySelectorAll('.compra-produto-input')
 
-editarBotao.addEventListener('click', function(){
-    
-    concluirBotao.style.display = "inline" // desabilita o botão concluir
-    produtoInputs.forEach(input=>{ // habilita os inputs 
-        input.disabled = false
-    })
-})
+editarBotao.addEventListener('click', habilitaEdicao)
 
 excluirBotao.addEventListener('click', function(){
+    var compraSelecionada = document.querySelector('.compra-fornecedor-selecionada');
+    
+    console.log('excluir compra')
+    console.log(`id: ${compraSelecionada.dataset.idcompra}`)
 
-    console.log('oi')
-    produtoInputs.forEach(input=>{
-        input.disabled = true
-    })
+    //if(compraSelecionada.dataset.idcompra == "nova-compra") {
+        compraSelecionada.remove();
+
+        function limpaTabela() {
+            var compraProdutoTabela = document.getElementById ("compraProdutoRow");
+            var rowCount = compraProdutoTabela.rows.length;
+            if (rowCount > 1) {
+                for (i= 1; i < rowCount; i++) {
+                    compraProdutoTabela.deleteRow(1);
+                }
+            }
+            else {
+                console.log("já existe uma nova compra vazia")
+                return;
+            }
+        }
+        
+        limpaTabela()
+    //}
+
 })

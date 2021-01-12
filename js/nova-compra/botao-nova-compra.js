@@ -1,7 +1,6 @@
 // variáveis do DOM
 var compraProdutoTabela = document.getElementById ("compraProdutoRow");
 var botaoNovaCompra = document.querySelector (".nova-compra-botao");
-var tabelaCompras = document.getElementById('compraFornecedorTable');
 var dataCompraDados = document.getElementById('dataCompra');
 var horaCompra = document.getElementById('horaCompra');
 
@@ -28,17 +27,21 @@ horaAtual = h + ":" + m;
 //quando botao clicado
 botaoNovaCompra.addEventListener("click", novaCompra)
 
-function novaCompra() {
 
+function novaCompra() {
+    var tabelaCompras = document.getElementById('compraFornecedorTable');
+
+    
     if(checaNovaCompra()==true) {
         console.log('já tem uma compra em aberto')}
-    
-    else {
-    
+        
+        else {
+            
         var rowCount = compraProdutoTabela.rows.length;
         if (rowCount > 1) {
             // limpando a tabela central
             limpaTabela();
+        }
             //recontando o rowCount para entrar no else na próxima vez
             rowCount = compraProdutoTabela.rows.length;
 
@@ -61,8 +64,10 @@ function novaCompra() {
             limpaInput();
             novaCompra.classList.add("compra-fornecedor-selecionada");
             novaCompra.classList.add('compra-tr');
-        }
+        
     }
+    
+    habilitaEdicao()
 };
 
 // limpa a tabela
@@ -97,8 +102,9 @@ function limpaInput() {
 
 // checa se já existe uma "nova-compra"
 function checaNovaCompra() {
+
     var temNovaCompra = false;
-    const compraTr = document.querySelectorAll('.compra-tr');
+    var compraTr = document.querySelectorAll('.compra-tr');
     compraTr.forEach(item=>{
         /*console.log(item.getAttribute('data-idcompra'))*/
         if(item.getAttribute('data-idcompra') == "nova-compra"){
