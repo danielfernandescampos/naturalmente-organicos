@@ -15,8 +15,6 @@ function calculaPrecoVenda() {
     })
 }
 
-
-
 var tabelaOferta = document.getElementById('tabelaNovaOferta');
 tabelaOferta.addEventListener('click', function(event){
     if(event.target.classList.contains('compra-produto-input')){
