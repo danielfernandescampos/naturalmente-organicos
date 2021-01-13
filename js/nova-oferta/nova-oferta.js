@@ -17,6 +17,9 @@ checkbox.forEach(function(item){
                 }    
             }) 
         }
+        
+    calculaCustoOfertaTotal();
+    calculaPrecoOfertaTotal();
     })
 })
 

@@ -81,6 +81,4 @@ function populaTabelaCompras(idCompra){
     })
 
     calculaPrecoVenda();
-    //calculaCustoTotal();
-    //desabilitaEdicao()
 }

@@ -114,7 +114,7 @@
               <tr>
                 <th colspan="3">Compras disponíveis</th>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>
                     <input class="checkboxCompra" type="checkbox" id="compra1">
                     <label for="compra1">Sítio do João</label>
@@ -137,9 +137,9 @@
                 </td>
                 <td>20/10/2020</td>
                 <td><img class="edit-img-esq" src="../img/edit-icon.png"></td>
-              </tr>
+              </tr> -->
             </table>
-            <button class="botao nova-compra-botao">NOVA OFERTA</button>
+            <!-- <button class="botao nova-compra-botao">NOVA OFERTA</button> -->
           </div>
 
           <!-- coluna da direita - dados oferta -->
@@ -162,7 +162,7 @@
                 <td><input type="time" id="horaCompra" placeholder="09:00"></td>
               </tr>           
               <tr>
-                <td>Margem geral</td>
+                <td>Lucro global</td>
                 <td><input type="number" min="0" id="margemGeral" placeholder="35%"></td>
               </tr>
            
@@ -172,11 +172,11 @@
               </tr>
               <tr>
                 <td>Custo total:</td>
-                <td class="total">R$2.556,58</td>
+                <td id="custoOferta" class="total">R$2.556,58</td>
               </tr>
               <tr>
                 <td>Preço total:</td>
-                <td class="total">R$3.556,58</td>
+                <td id="precoOferta" class="total">R$3.556,58</td>
               </tr>
             </table>
             <button class="botao concluir-compra-botao">SALVAR OFERTA</button>
@@ -189,21 +189,21 @@
                 <th colspan="3">Item</th>
                 <th>Quant</th>
                 <th>Custo</th>
-                <th>%</th>
+                <th>Lucro</th>
                 <th>Preço</th>
                 <th>Un Venda</th>
                 <th>Data</th>
                 <th>Fornecedor</th>
               </tr>
-              <tr class="produto-tr">
+              <!-- <tr class="produto-tr">
                 <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
                 <td>Banana Prata</td>
                 <td><button class="add-produto-button-off">=</button></td>
-                <td>20 kg</td>
-                <td>R$ 5,90</td>
-                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>20</td>
+                <td>5.90</td>
+                <td><input class="compra-produto-input" placeholder="35%" value="35"></td>
                 <td>R$ 3,98</td>
-                <td>500 g</td>
+                <td>.5</td>
                 <td>20/11/2020</td>
                 <td>Sítio do João</td>
               </tr>   
@@ -211,15 +211,15 @@
                 <td><img class="compra-produto-img" src="../img/produtos/banana.png"></td>
                 <td>Banana Prata</td>
                 <td><button class="add-produto-button-off">=</button></td>
-                <td>20 kg</td>
-                <td>R$ 5,90</td>
-                <td><input class="compra-produto-input" placeholder="35%"></td>
+                <td>20</td>
+                <td>5.90</td>
+                <td><input class="compra-produto-input" placeholder="35%" value="50"></td>
                 <td>R$ 3,98</td>
-                <td>500 g</td>
+                <td>2</td>
                 <td>20/11/2020</td>
                 <td>Sítio do João</td>
               </tr>   
-                              
+                               -->
             </table>
           </div>
 
@@ -228,6 +228,7 @@
 
     <script src="../js/dados/compras.js"></script>
     <script src="../js/dados/produtos.js"></script>
+    <script src="../js/nova-oferta/margemGlobal.js"></script>
     <script src="../js/helpers/calculaPrecoVenda.js"></script>
     <script src="../js/helpers/populaTabelaOferta.js"></script>
     <script src="../js/nova-oferta/busca-fixa.js"></script>
