@@ -150,30 +150,32 @@
             </div>
             <table class="dados-compra">
               <tr>
-                <th colspan="3">Dados da Oferta</th>
+                <th colspan="2">Dados da Oferta</th>
               </tr>
             
               <tr>
-                <td>Início</td>
-                <td><input id="horaCompra" placeholder="09:00"></td>
-                <td><input id="dataCompra" placeholder="17/10/2020"></td>
+                <td>Dia</td>
+                <td><input type="date" id="dataCompra" placeholder="17/10/2020"></td>
+              </tr>
+              <tr>
+                <td>Hora</td>
+                <td><input type="time" id="horaCompra" placeholder="09:00"></td>
+              </tr>           
+              <tr>
+                <td>Margem geral</td>
+                <td><input type="number" min="0" id="margemGeral" placeholder="35%"></td>
               </tr>
            
               <tr>
-                <td colspan="2">Margem geral</td>
-                <td><input id="horaCompra" placeholder="35%"></td>
-              </tr>
-           
-              <tr>
-                <td colspan="2">Status:</td>
+                <td>Status:</td>
                 <td>Off-line</td>
               </tr>
               <tr>
-                <td colspan="2">Custo total:</td>
+                <td>Custo total:</td>
                 <td class="total">R$2.556,58</td>
               </tr>
               <tr>
-                <td colspan="2">Preço total:</td>
+                <td>Preço total:</td>
                 <td class="total">R$3.556,58</td>
               </tr>
             </table>
@@ -226,6 +228,7 @@
 
     <script src="../js/dados/compras.js"></script>
     <script src="../js/dados/produtos.js"></script>
+    <script src="../js/helpers/calculaPrecoVenda.js"></script>
     <script src="../js/helpers/populaTabelaOferta.js"></script>
     <script src="../js/nova-oferta/busca-fixa.js"></script>
     <script src="../js/nova-oferta/popula-compras-disponiveis.js"></script>

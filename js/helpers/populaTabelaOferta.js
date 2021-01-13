@@ -33,8 +33,8 @@ function populaTabelaCompras(idCompra){
                 lucroInput.min = "0"
                 lucroInput.classList.add('compra-produto-input');
                 lucro.appendChild(lucroInput);
-                lucroInput.value = "2"
-                preco.textContent = "0";
+                lucroInput.value = "35"
+
 
                 data.textContent = compra.data;
                 fornecedor.textContent = compra.fornecedor;
@@ -61,6 +61,7 @@ function populaTabelaCompras(idCompra){
                         nome.textContent = produto.nome;
                         imgConteudo.src = produto.foto;
                         unVenda.textContent = produto.unVenda;
+                        preco.textContent = itemCompra.custo * produto.unVenda;
                     }
                 })
             })
@@ -79,7 +80,7 @@ function populaTabelaCompras(idCompra){
         } 
     })
 
-    //calculaCustoParcial();
+    calculaPrecoVenda();
     //calculaCustoTotal();
     //desabilitaEdicao()
 }
