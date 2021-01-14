@@ -36,6 +36,7 @@ const compras = [
         itemCompra: [
             {id:2, quant:35, custo:2.90},
             {id:8, quant:53, custo:8.30},
+            {id:31, quant:30, custo:4.90},
             {id:3, quant:10, custo:12}
         ]
     }
