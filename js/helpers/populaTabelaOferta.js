@@ -1,4 +1,4 @@
-function populaTabelaCompras(idCompra){     
+function populaTabelaOferta(idCompra){     
     compras.forEach(compra =>{
         if(idCompra == compra.idCompra){
             compra.itemCompra.forEach(itemCompra=>{
@@ -61,7 +61,7 @@ function populaTabelaCompras(idCompra){
                         nome.textContent = produto.nome;
                         imgConteudo.src = produto.foto;
                         unVenda.textContent = produto.unVenda;
-                        preco.textContent = itemCompra.custo * produto.unVenda;
+                        preco.textContent = itemCompra.custo*produto.unVenda*1.35;
                     }
                 })
             })

@@ -32,7 +32,7 @@ function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a cl
                 var nome = document.createElement('td');
                 var quant = document.createElement('td');
                 var quantConteudo = document.createElement('input');
-                var quantoLabel = document.createElement('label');
+                var quantLabel = document.createElement('label');
                 var custo = document.createElement('td');
                 var custoConteudo = document.createElement('input');
                 var total = document.createElement('td');
@@ -52,7 +52,7 @@ function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a cl
                 quantConteudo.step = "any";
                 quantConteudo.value = itemCompra.quant;
                 quant.appendChild(quantConteudo);
-                quant.appendChild(quantoLabel);
+                quant.appendChild(quantLabel);
         
                 custo.textContent = "R$";
                 custoConteudo.classList.add("compra-produto-input");
@@ -86,7 +86,7 @@ function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a cl
                         novoProduto.setAttribute('data-idProduto', produto.id);
                         nome.textContent = produto.nome;
                         imgConteudo.src = produto.foto;
-                        quantoLabel.textContent = produto.unTipo;
+                        quantLabel.textContent = produto.unTipo;
                     }
                 })
             })

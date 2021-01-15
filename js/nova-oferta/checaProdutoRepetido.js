@@ -20,7 +20,7 @@ function checaProdutoRepetido() {
     }
 
     produtosRepeditos = findDuplicates(arrayProdutos);
-    console.log(`produtosRepetidos: ${produtosRepeditos}`);       
+    //console.log(`produtosRepetidos: ${produtosRepeditos}`);       
     // pega os dados dos produtos duplicados para fórmula da média
     arrayProdutosDuplicados = []; // reunindo a info de todos os produtos duplicados
     produtoTr.forEach(produto=>{
@@ -32,24 +32,44 @@ function checaProdutoRepetido() {
                 objProduto.id = idProduto;
                 objProduto.quant = produto.querySelector('td:nth-child(4)').textContent;
                 objProduto.custo = produto.querySelector('td:nth-child(5)').textContent;
-                arrayProdutosDuplicados.push(objProduto);
-                // faz a média ponderada                            
+                arrayProdutosDuplicados.push(objProduto);                          
                 produto.remove()
             }
-    })
-    novoArrayDuplicados = [];          
-    
-    console.log(arrayProdutosDuplicados); //?
-    
+        })
+        // transformando os obj iguais em um e aplicando a fórmula de média
+        const produtosSumarizados = arrayProdutosDuplicados.reduce((acc, curr) => {
+            // procura no acc o produto repetido
+            const duplicatedProduct = acc.find(item => item.id === curr.id);
+            // verifica o tamnho da lista de produtos repetidos
+            // se tiver produto duplicado
+            if (duplicatedProduct) {
+              // soma as quantidades
+              const newQuant = parseFloat(duplicatedProduct.quant) + parseFloat(curr.quant);
+              // soma os custos
+              const newCusto = (parseFloat(duplicatedProduct.custo)*parseFloat(duplicatedProduct.quant) + parseFloat(curr.custo)*parseFloat(curr.quant))/newQuant;
+              // altera o produto existente na lista final para ter a quantidade e o custo final 
+              acc.forEach(item => {
+                if (item.id === duplicatedProduct.id) {
+                  item.quant = newQuant;
+                  item.custo = newCusto;
+                }
+              });
+              return acc;
+            }  
+            // se não tiver produto duplicado
+            acc.push(curr);
+            return acc;
+          }, []);
+          //console.log(produtosSumarizados);
     // cria novo produto com os duplicados
-    produtosRepeditos.forEach(duplicado=>{
-        criaProduto(duplicado)
-    })    
+    produtosSumarizados.forEach(obj=>{
+        criaProduto(obj)
+    })  
 }
 
-function criaProduto(id) {
+function criaProduto(obj) {
     produtos.forEach(produto=>{
-        if(id == produto.id) {
+        if(obj.id == produto.id) {
             // pega a tabela no DOM
             var tabela = document.getElementById('tabelaNovaOferta');
             // cria uma nova linha
@@ -73,10 +93,11 @@ function criaProduto(id) {
             imgConteudo.classList.add("compra-produto-img")
             img.appendChild(imgConteudo);
             sumarizaBtn.textContent = "="
+            sumarizaBtn.classList.add('sumariza-btn')
             // sumarizaBtn.classList.add('add-produto-button-off');
             sumariza.appendChild(sumarizaBtn);        
-            quant.textContent = "soma";
-            custo.textContent = "média";
+            quant.textContent = obj.quant;
+            custo.textContent = obj.custo;
             lucroInput.type = "number";
             lucroInput.min = "0"
             lucroInput.classList.add('compra-produto-input');
@@ -108,7 +129,7 @@ function criaProduto(id) {
             nome.textContent = produto.nome;
             imgConteudo.src = produto.foto;
             unVenda.textContent = produto.unVenda;
-            preco.textContent = "zero";      
+            preco.textContent = (obj.custo*produto.unVenda*1.35).toFixed(2);      
         }
     })
 }

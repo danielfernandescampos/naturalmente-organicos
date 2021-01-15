@@ -3,7 +3,7 @@ var checkbox = tabelaCompras.querySelectorAll('.checkboxCompra');
 var arrayCheck = [];
 
 checkbox.forEach(function(item){
-    item.addEventListener('click', function(){ // tenho que pegar todos que estão marcados e toda vez que clicar apagar a tabela central, checar os que estão marcados e recriar a tabela com os marcados
+    item.addEventListener('click', function(){ // toda vez que clica apagar a tabela central, checa os que estão marcados e recria a tabela com os marcados
         produtosTr = document.querySelectorAll('.produto-tr');
         produtosTr.forEach(item=>{
             item.remove();
@@ -13,7 +13,7 @@ checkbox.forEach(function(item){
             arrayCheck.push(idCompra)
             //populaTabelaCompras(idCompra)
             arrayCheck.forEach(id=>{
-                populaTabelaCompras(id)
+                populaTabelaOferta(id)
             })
         }
 
@@ -30,11 +30,12 @@ checkbox.forEach(function(item){
             //     }    
             // }) 
             arrayCheck.forEach(id=>{
-                populaTabelaCompras(id)
+                populaTabelaOferta(id)
             })
         }
         
         checaProdutoRepetido();
+        sumarizaCheck();
         calculaCustoOfertaTotal();
         calculaPrecoOfertaTotal();
 

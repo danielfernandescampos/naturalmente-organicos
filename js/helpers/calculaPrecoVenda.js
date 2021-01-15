@@ -6,10 +6,12 @@ function calculaPrecoVenda() {
         var custoDOM = produto.querySelector('td:nth-child(5)').textContent;
         var lucroDOM = produto.querySelector('td:nth-child(6) input').value;
         var precoDOM = produto.querySelector('td:nth-child(7)');
+        var unVendaDOM = produto.querySelector('td:nth-child(8)').textContent;
         
         custo = parseFloat(custoDOM);
         lucro = ((parseFloat(lucroDOM)/100) + 1);
-        preco = (custo * lucro).toFixed(2);
+        unVenda = parseFloat(unVendaDOM);
+        preco = (custo * lucro * unVenda).toFixed(2);
         precoDOM.textContent = preco;
 
     })
@@ -34,7 +36,6 @@ tabelaOferta.addEventListener('keyup', function(event){
     }
 })
 
-
 function calculaCustoOfertaTotal (){
 
     var produtoTr = document.querySelectorAll('.produto-tr');
@@ -53,7 +54,7 @@ function calculaCustoOfertaTotal (){
 function calculaPrecoOfertaTotal(){
     
     var produtoTr = document.querySelectorAll('.produto-tr');
-    var precoTotal = document.getElementById('precoOferta')
+    var precoTotal = document.getElementById('precoOferta');
     arrayTotais = []
     produtoTr.forEach(produto=>{
         var quantProduto = produto.querySelector('td:nth-child(4)').textContent;

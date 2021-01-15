@@ -1,5 +1,4 @@
 // variáveis do DOM
-var compraProdutoTabela = document.getElementById ("compraProdutoRow");
 var botaoNovaCompra = document.querySelector (".nova-compra-botao");
 var dataCompraDados = document.getElementById('dataCompra');
 var horaCompra = document.getElementById('horaCompra');
@@ -8,6 +7,7 @@ var horaCompra = document.getElementById('horaCompra');
 botaoNovaCompra.addEventListener("click", novaCompra)
 
 function novaCompra() {
+    var compraProdutoTabela = document.getElementById ("compraProdutoRow");
     var tabelaCompras = document.getElementById('compraFornecedorTable');
     
     if(checaNovaCompra()==true) { // checa se já tem uma nova compra em aberto
@@ -17,7 +17,9 @@ function novaCompra() {
             var rowCount = compraProdutoTabela.rows.length;
             if (rowCount > 1) {
                 // limpando a tabela central
-                limpaTabela();
+                limpaTabela();                
+                habilitaEdicao();
+                calculaCustoTotal();
             }
             //recontando o rowCount para entrar no else na próxima vez
             rowCount = compraProdutoTabela.rows.length;
@@ -44,8 +46,6 @@ function novaCompra() {
             novaCompra.classList.add('compra-tr');        
     }
     
-    habilitaEdicao();
-    calculaCustoTotal();
 };
 
 // limpa input
