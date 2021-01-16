@@ -46,6 +46,7 @@
 
 .menu__ul {
     display: flex;  
+    position: relative;
     justify-content: space-evenly;  
     align-items: center;   
 }
@@ -89,6 +90,15 @@
 
 .menu__cliente__busca:active {
     background: rgb(241, 241, 241);   
+}
+
+#itensSacola {
+    color:grey;
+    position: absolute;
+    right: 76px;
+    top: 20px;
+    font-weight: bold;
+    display: none;
 }
 
 

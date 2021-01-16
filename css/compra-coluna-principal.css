@@ -67,15 +67,11 @@
 .compra-produto-input {
     width: 40px;
     margin: 5px;
-}
-
-.compra-produto td input {
     background-color: rgb(250, 250, 250);
     padding: .2rem;
     border: 1px solid rgb(240, 240, 240);
     text-align: center;
     outline-color: rgba(64, 136, 55, 0.438);
-
 }
 
 .add-produto {
