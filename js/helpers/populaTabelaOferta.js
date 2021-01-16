@@ -79,6 +79,5 @@ function populaTabelaOferta(idCompra){
             // statusCompra.textContent = compra.status;
         } 
     })
-
     calculaPrecoVenda();
 }

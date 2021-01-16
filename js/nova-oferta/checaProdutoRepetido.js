@@ -40,7 +40,7 @@ function checaProdutoRepetido() {
         const produtosSumarizados = arrayProdutosDuplicados.reduce((acc, curr) => {
             // procura no acc o produto repetido
             const duplicatedProduct = acc.find(item => item.id === curr.id);
-            // verifica o tamnho da lista de produtos repetidos
+            // verifica o tamanho da lista de produtos repetidos
             // se tiver produto duplicado
             if (duplicatedProduct) {
               // soma as quantidades
