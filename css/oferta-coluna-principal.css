@@ -2,6 +2,10 @@
     font-size: 1rem;
 }
 
+.produto-tr td:nth-child(11) {
+    text-align: center;
+}
+
 .oferta-produto td:nth-child(2) {
     font-size: 100%;
 }
@@ -14,4 +18,21 @@
 
 .invisivel {
     display: none;
+}
+
+/* .tbody-teste {
+    position: relative;
+    background-color: yellowgreen;
+} */
+
+.sumariza-btn {
+    cursor: pointer;
+}
+
+.sumariza-check-off {
+    display: none;
+}
+
+.sumariza-check-on {
+    display: table-cell;
 }

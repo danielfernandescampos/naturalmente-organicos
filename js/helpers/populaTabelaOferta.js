@@ -13,7 +13,7 @@ function populaTabelaOferta(idCompra){
                 var sumarizaCheck = document.createElement('td');
                 var sumarizaInput = document.createElement('input');
                 var sumariza = document.createElement('td');
-                var sumarizaBtn = document.createElement('button');
+                var sumarizaBtn = document.createElement('img');
                 var quant = document.createElement('td');
                 var custo = document.createElement('td');
                 var lucro = document.createElement('td');
@@ -28,8 +28,8 @@ function populaTabelaOferta(idCompra){
                 img.appendChild(imgConteudo);
                 sumarizaCheck.appendChild(sumarizaInput);
                 sumarizaInput.type = "checkbox";
-                sumarizaCheck.classList.add("invisivel");
-                sumarizaBtn.textContent = "="
+                sumarizaInput.classList.add("sumariza-check-off");
+                sumarizaBtn.src = "../img/sumariza-btn.png";
                 sumarizaBtn.classList.add('add-produto-button-off');
                 sumariza.appendChild(sumarizaBtn);        
                 quant.textContent = itemCompra.quant;

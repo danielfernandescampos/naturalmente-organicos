@@ -9,8 +9,8 @@ function sumarizaCheck() {
                 sumarizado.classList.add('produto-tr');
                 btn.parentElement.parentElement.classList.remove('produto-tr');
                 btn.parentElement.parentElement.classList.add('invisivel');
-                sortTable()
-                console.log(sumarizado)
+                sumarizado.querySelector('.sumariza-check-off').classList.add("sumariza-check-on");
+                sortTable();
                 }
             })
             const idBtn = btn.parentElement.parentElement.dataset.idproduto;
@@ -20,6 +20,29 @@ function sumarizaCheck() {
                     //criaProduto(duplicado);
                 }
             })
+            sumarizaCheck2 ()
         })
     })
+
+}
+
+function sumarizaCheck2 () {
+    var sumarizado = document.querySelectorAll('.produto-sumarizado')
+    var checados = document.querySelectorAll('.sumariza-check-on');
+    checados.forEach(checado=>{
+        //console.log(checado.parentElement.parentElement);
+        //console.log(checado)
+        checado.addEventListener('click', function(){
+            if(checado.checked == true){
+                console.log('oi')
+                //joga num array
+                //se array.length > 2
+                //apaga itens checados, acendo .produto-sumarizado e faz a fórmula
+            }
+        })
+    })
+    sumarizado.forEach(item=>{
+        //console.log(item)
+    })
+
 }

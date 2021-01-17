@@ -8,6 +8,10 @@ checkbox.forEach(function(item){
         produtosTr.forEach(item=>{
             item.remove();
         }) 
+        produtosInv = document.querySelectorAll('.invisivel');
+        produtosInv.forEach(item=>{
+            item.remove();
+        }) 
         if(item.checked == true){
             var idCompra = item.parentElement.parentElement.dataset.idcompra 
             arrayCheck.push(idCompra)

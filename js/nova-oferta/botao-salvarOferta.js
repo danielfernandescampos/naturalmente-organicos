@@ -18,7 +18,7 @@ salvarOferta.addEventListener('click', function(){
     // pegando as informações dos itens compra
     itensOferta.forEach(item=>{
         // pegando cada item da compra
-        var lucroProduto = item.querySelector('td:nth-child(6) input').value;
+        var lucroProduto = item.querySelector('.pr-lucro').value;
         let idProduto = item.dataset.idproduto;
 
         // criando o json com os dados do produto
