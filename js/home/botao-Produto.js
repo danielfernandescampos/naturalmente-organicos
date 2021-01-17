@@ -1,6 +1,5 @@
 var addBtn = document.querySelectorAll('.addBtn');
 var delBtn = document.querySelectorAll('.delBtn');
-var sacolaIcon = document.getElementById('itensSacola');
 
 let arraySacola = [];
 var numberPattern = /\d+[.]\d+/g; // pega só o número no preço
@@ -24,6 +23,7 @@ addBtn.forEach(btn=>{
                 itemCompra.preco = (preco.textContent).match(numberPattern).join('');
                 arraySacola.push(itemCompra)
             }
+        checaArraySacola(arraySacola)
     })
 })
 
@@ -42,8 +42,17 @@ delBtn.forEach(btn=>{
         if (input.value == 0) {
             console.log("zero")
         }
+    checaArraySacola(arraySacola)
     })
 })
 
 
-//checaArraySacola(sacola){}
+function checaArraySacola(sacola) {
+    var sacolaIcon = document.getElementById('itensSacola');
+    sacolaIcon.textContent = sacola.length;
+    console.log(sacola.length)
+    if(sacola.length > 0){
+        document.querySelector('.itens-sacola').style.display = "flex";
+    }
+}
+

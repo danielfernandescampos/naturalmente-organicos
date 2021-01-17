@@ -2,11 +2,15 @@ function calculaPrecoVenda() {
 
     var produtoTr = document.querySelectorAll('.produto-tr');
     produtoTr.forEach(produto=>{
-
-        var custoDOM = produto.querySelector('td:nth-child(5)').textContent;
-        var lucroDOM = produto.querySelector('td:nth-child(6) input').value;
-        var precoDOM = produto.querySelector('td:nth-child(7)');
-        var unVendaDOM = produto.querySelector('td:nth-child(8)').textContent;
+        var custoDOM = produto.querySelector('.pr-custo').textContent; 
+        var lucroDOM = produto.querySelector('.pr-lucro').value; 
+        var precoDOM = produto.querySelector('.pr-preco'); 
+        var unVendaDOM = produto.querySelector('.pr-unvenda').textContent; 
+        //4 pr-quant
+        //5 pr-custo
+        //6 pr-lucro
+        //7 pr-preco
+        //8 pr-unvenda
         
         custo = parseFloat(custoDOM);
         lucro = ((parseFloat(lucroDOM)/100) + 1);
@@ -42,8 +46,8 @@ function calculaCustoOfertaTotal (){
     var custoTotal = document.getElementById('custoOferta')
     arrayTotais = []
     produtoTr.forEach(produto=>{
-        var quantProduto = produto.querySelector('td:nth-child(4)').textContent;
-        var custoProduto = produto.querySelector('td:nth-child(5)').textContent;
+        var quantProduto = produto.querySelector('.pr-quant').textContent;
+        var custoProduto = produto.querySelector('.pr-custo').textContent;
         var totalProduto = parseFloat(quantProduto) * parseFloat(custoProduto)
         arrayTotais.push(totalProduto);
     })
@@ -57,13 +61,12 @@ function calculaPrecoOfertaTotal(){
     var precoTotal = document.getElementById('precoOferta');
     arrayTotais = []
     produtoTr.forEach(produto=>{
-        var quantProduto = produto.querySelector('td:nth-child(4)').textContent;
-        var custoProduto = produto.querySelector('td:nth-child(5)').textContent;
-        var lucroProduto = produto.querySelector('td:nth-child(6) input').value;
+        var quantProduto = produto.querySelector('.pr-quant').textContent; // 4 pr-quant
+        var custoProduto = produto.querySelector('.pr-custo').textContent;
+        var lucroProduto = produto.querySelector('.pr-lucro').value;
         var totalProduto = parseFloat(quantProduto) * parseFloat(custoProduto) * (parseFloat(lucroProduto)/100 + 1)
         arrayTotais.push(totalProduto);
     })
-
     precoTotal.textContent = `R$ ${(arrayTotais.reduce((a, b) => a + b, 0)).toFixed(2)}`
 }
 

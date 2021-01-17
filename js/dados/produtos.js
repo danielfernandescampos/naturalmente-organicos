@@ -107,7 +107,7 @@ const produtos = [
     },
     {
         id: 14,
-        nome: "Aimpim",
+        nome: "Aipim",
         categ: "Legume",
         foto: "../img/produtos/sem-foto.png",
         unTipo: "kg",

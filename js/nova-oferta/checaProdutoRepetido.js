@@ -5,11 +5,14 @@ function checaProdutoRepetido() {
     // cria array com id de todos os produtos
     produtoTr.forEach(produto=>{
         idProduto = produto.dataset.idproduto;
-        arrayProdutos.push(idProduto);
+        if (produto.classList.contains('produto-sumarizado')){
+          console.log('oi')
+          }
+          arrayProdutos.push(idProduto);
     })
     // descobre os itens duplicados
     const findDuplicates = (arr) => {
-        let sorted_arr = arr.slice().sort(); // slice cria uma cópia do arry e sort ordena o array
+        let sorted_arr = arr.slice().sort(); // slice cria uma cópia do array e sort ordena o array
         let results = [];
         for (let i = 0; i < sorted_arr.length - 1; i++) {
           if (sorted_arr[i + 1] == sorted_arr[i] && !results.includes(sorted_arr[i])) { // compara se o próximo item é igual ao anterior
@@ -30,12 +33,15 @@ function checaProdutoRepetido() {
                 // pega info dos produtos para média ponderada
                 var objProduto = new Object();
                 objProduto.id = idProduto;
-                objProduto.quant = produto.querySelector('td:nth-child(4)').textContent;
-                objProduto.custo = produto.querySelector('td:nth-child(5)').textContent;
+                objProduto.quant = produto.querySelector('.pr-quant').textContent;
+                objProduto.custo = produto.querySelector('.pr-custo').textContent;
                 arrayProdutosDuplicados.push(objProduto);                          
-                produto.remove()
+                //produto.remove()
+                produto.classList.add('invisivel');
+                produto.classList.remove('produto-tr');
             }
         })
+        // console.log(arrayProdutosDuplicados)
         // transformando os obj iguais em um e aplicando a fórmula de média
         const produtosSumarizados = arrayProdutosDuplicados.reduce((acc, curr) => {
             // procura no acc o produto repetido
@@ -51,7 +57,7 @@ function checaProdutoRepetido() {
               acc.forEach(item => {
                 if (item.id === duplicatedProduct.id) {
                   item.quant = newQuant;
-                  item.custo = newCusto;
+                  item.custo = newCusto.toFixed(2);
                 }
               });
               return acc;
@@ -78,6 +84,8 @@ function criaProduto(obj) {
             var img = document.createElement('td');
             var imgConteudo = document.createElement('img');
             var nome = document.createElement('td');
+            var sumarizaCheck = document.createElement('td');
+            var sumarizaInput = document.createElement('input');
             var sumariza = document.createElement('td');
             var sumarizaBtn = document.createElement('button');
             var quant = document.createElement('td');
@@ -92,6 +100,9 @@ function criaProduto(obj) {
             // adiciona os conteúdos 
             imgConteudo.classList.add("compra-produto-img")
             img.appendChild(imgConteudo);
+            sumarizaCheck.appendChild(sumarizaInput);
+            sumarizaInput.type = "checkbox";
+            sumarizaCheck.classList.add("invisivel");
             sumarizaBtn.textContent = "="
             sumarizaBtn.classList.add('sumariza-btn')
             // sumarizaBtn.classList.add('add-produto-button-off');
@@ -104,13 +115,19 @@ function criaProduto(obj) {
             lucro.appendChild(lucroInput);
             lucroInput.value = "35";
 
+            quant.classList.add('pr-quant');
+            custo.classList.add('pr-custo'); 
+            lucroInput.classList.add('pr-lucro');
+            preco.classList.add('pr-preco');
+            unVenda.classList.add('pr-unvenda');
 
-            data.textContent = "resolver";
-            fornecedor.textContent = "vários";
+            data.textContent = "Vários";
+            fornecedor.textContent = "Vários";
 
             // append os childs td na tr
             novoProduto.appendChild(img);
             novoProduto.appendChild(nome);
+            novoProduto.appendChild(sumarizaCheck);
             novoProduto.appendChild(sumariza);
             novoProduto.appendChild(quant);
             novoProduto.appendChild(custo);

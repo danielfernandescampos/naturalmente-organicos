@@ -10,6 +10,8 @@ function populaTabelaOferta(idCompra){
                 var img = document.createElement('td');
                 var imgConteudo = document.createElement('img');
                 var nome = document.createElement('td');
+                var sumarizaCheck = document.createElement('td');
+                var sumarizaInput = document.createElement('input');
                 var sumariza = document.createElement('td');
                 var sumarizaBtn = document.createElement('button');
                 var quant = document.createElement('td');
@@ -24,6 +26,9 @@ function populaTabelaOferta(idCompra){
                 // adiciona os conteúdos através do json de produtos
                 imgConteudo.classList.add("compra-produto-img")
                 img.appendChild(imgConteudo);
+                sumarizaCheck.appendChild(sumarizaInput);
+                sumarizaInput.type = "checkbox";
+                sumarizaCheck.classList.add("invisivel");
                 sumarizaBtn.textContent = "="
                 sumarizaBtn.classList.add('add-produto-button-off');
                 sumariza.appendChild(sumarizaBtn);        
@@ -35,6 +40,12 @@ function populaTabelaOferta(idCompra){
                 lucro.appendChild(lucroInput);
                 lucroInput.value = "35"
 
+                quant.classList.add('pr-quant');
+                custo.classList.add('pr-custo'); 
+                lucroInput.classList.add('pr-lucro');
+                preco.classList.add('pr-preco');
+                unVenda.classList.add('pr-unvenda');
+
 
                 data.textContent = compra.data;
                 fornecedor.textContent = compra.fornecedor;
@@ -42,6 +53,7 @@ function populaTabelaOferta(idCompra){
                 // append os childs td na tr
                 novoProduto.appendChild(img);
                 novoProduto.appendChild(nome);
+                novoProduto.appendChild(sumarizaCheck);
                 novoProduto.appendChild(sumariza);
                 novoProduto.appendChild(quant);
                 novoProduto.appendChild(custo);

@@ -93,12 +93,22 @@
 }
 
 #itensSacola {
-    color:grey;
-    position: absolute;
-    right: 76px;
-    top: 20px;
+    color: white;
     font-weight: bold;
+}
+
+.itens-sacola {
+    position: absolute;
     display: none;
+    align-items: center;
+    justify-content: center;
+    right: 62px;
+    top: 22px;
+    border-radius: 100%;
+    background-color: #87ae87;
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
 
 

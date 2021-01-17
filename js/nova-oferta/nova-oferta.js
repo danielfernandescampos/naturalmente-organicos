@@ -14,7 +14,7 @@ checkbox.forEach(function(item){
             //populaTabelaCompras(idCompra)
             arrayCheck.forEach(id=>{
                 populaTabelaOferta(id)
-            })
+            })            
         }
 
         if(item.checked == false) {
@@ -38,7 +38,7 @@ checkbox.forEach(function(item){
         sumarizaCheck();
         calculaCustoOfertaTotal();
         calculaPrecoOfertaTotal();
-
+        sortTable()
     })
 })
 
