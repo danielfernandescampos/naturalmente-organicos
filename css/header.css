@@ -42,6 +42,7 @@
 
 .menu__img {
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 .menu__ul {
@@ -102,8 +103,8 @@
     display: none;
     align-items: center;
     justify-content: center;
-    right: 62px;
-    top: 22px;
+    right: 4.5rem;
+    top: 1.5rem;
     border-radius: 100%;
     background-color: #87ae87;
     width: 20px;
@@ -128,4 +129,8 @@
 .menu__categorias__link {
     color:white;
     text-decoration: none;    
+}
+
+#itensSacola {
+    cursor:pointer;
 }

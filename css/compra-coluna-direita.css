@@ -1,7 +1,7 @@
 .coluna-direita {
     position: fixed;
     display: block;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     color: grey;
     width: 250px;
     top: 80px;

@@ -1,5 +1,6 @@
-function sumarizaCheck() {
+function sumarizaBtn() {
     var botao = document.querySelectorAll(".sumariza-btn");
+    var arrayChecados = [];
     botao.forEach(btn=>{
         btn.addEventListener('click', function(){
             var sumarizados = document.querySelectorAll('.invisivel');
@@ -20,29 +21,53 @@ function sumarizaCheck() {
                     //criaProduto(duplicado);
                 }
             })
-            sumarizaCheck2 ()
+            sumarizaCheck (arrayChecados)
         })
     })
 
 }
 
-function sumarizaCheck2 () {
-    var sumarizado = document.querySelectorAll('.produto-sumarizado')
+function sumarizaCheck (arrayChecados) {
+    var sumarizados = document.querySelectorAll('.produto-sumarizado')
     var checados = document.querySelectorAll('.sumariza-check-on');
     checados.forEach(checado=>{
-        //console.log(checado.parentElement.parentElement);
-        //console.log(checado)
-        checado.addEventListener('click', function(){
-            if(checado.checked == true){
-                console.log('oi')
-                //joga num array
-                //se array.length > 2
-                //apaga itens checados, acendo .produto-sumarizado e faz a fórmula
-            }
+            checado.addEventListener('click', function(){
+                //var checados2 = document.querySelectorAll('.sumariza-check-on');
+                //checados2.forEach(checado2 => {
+                    if(checado.checked == true){
+                        objChecado = new Object();
+                        objChecado.id = checado.parentElement.parentElement.dataset.idproduto;
+                        objChecado.quant = checado.parentElement.parentElement.querySelector('.pr-quant').textContent;
+                        objChecado.custo = checado.parentElement.parentElement.querySelector('.pr-custo').textContent;
+                        console.log('objeto checado: ', objChecado)
+                        arrayChecados.push(objChecado);
+                    }
+                    const produtosSumarizados = arrayChecados.reduce((acc, curr) => {
+                        const duplicatedProduct = acc.find(item => item.id === curr.id); // procura no acc o produto repetido
+                        if (duplicatedProduct) { // se tiver produto duplicado
+                        const newQuant = parseFloat(duplicatedProduct.quant) + parseFloat(curr.quant); // soma as quantidades
+                        const newCusto = (parseFloat(duplicatedProduct.custo)*parseFloat(duplicatedProduct.quant) + parseFloat(curr.custo)*parseFloat(curr.quant))/newQuant; // soma os custos
+                        acc.forEach(item => { // altera o produto existente na lista final para ter a quantidade e o custo final 
+                            if (item.id === duplicatedProduct.id) {
+                            item.quant = newQuant;
+                            item.custo = newCusto.toFixed(2);
+                            }
+                        });
+                        return acc;
+                        }  
+                        // se não tiver produto duplicado
+                        acc.push(curr);
+                        return acc;
+                    }, []);
+                    //console.log('reduce produtosSumarizados: ', produtosSumarizados)
+                    //console.log('reduce arrayChecados: ', arrayChecados)
+      
+                console.log('array Checados: ', arrayChecados);        
+                //console.log('array Checados2: ', arrayChecados2);      
         })
-    })
-    sumarizado.forEach(item=>{
-        //console.log(item)
+       
     })
 
+
 }
+

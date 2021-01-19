@@ -12,14 +12,15 @@
     position: fixed;
     text-align: center;
     color: gray;
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    height: 410px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     background-color: white;
     padding: 1rem;
+    padding-top: 4rem;
     border: 1px solid rgb(216, 216, 216);
     border-radius: .2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
@@ -97,7 +98,6 @@
 }
 
 .login-linha {
-    background-color: #7c9e7c;
-    border-top: 1px solid green;
+    border: 1px solid  #87ae8770;
     margin: 1rem;
 }

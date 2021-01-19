@@ -2,7 +2,7 @@
 .coluna-esquerda {
     position: fixed;
     display: block;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     left: 0;
     width: 250px;
     height: 100%;

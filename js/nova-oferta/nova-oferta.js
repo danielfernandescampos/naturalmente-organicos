@@ -39,7 +39,7 @@ checkbox.forEach(function(item){
         }
         
         checaProdutoRepetido();
-        sumarizaCheck();
+        sumarizaBtn();
         calculaCustoOfertaTotal();
         calculaPrecoOfertaTotal();
         sortTable()

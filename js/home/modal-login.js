@@ -3,9 +3,16 @@ var modalOverlay = document.getElementById("modalOverlayLogin");
 var email = document.querySelector("#inputEmail");
 var senha = document.querySelector("#inputSenha"); 
 var entrarLoginBtn = document.querySelector("#entrarLoginBtn"); 
+var loginIcon = document.querySelector('.menu__img-login')
 
 // quando clica no botão login
 entrarBtn.addEventListener('click', function() {
+    document.getElementById("modalLogin").classList.add("modal-login")
+    document.getElementById("modalOverlayLogin").classList.add("modal-overlay");  
+    email.focus();  
+});
+
+loginIcon.addEventListener('click', function() {
     document.getElementById("modalLogin").classList.add("modal-login")
     document.getElementById("modalOverlayLogin").classList.add("modal-overlay");  
     email.focus();  
