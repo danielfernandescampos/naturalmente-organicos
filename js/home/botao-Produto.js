@@ -6,53 +6,60 @@ var numberPattern = /\d+[.]\d+/g; // pega só o número no preço
 
 addBtn.forEach(btn=>{
     btn.addEventListener('click', function(){
-        var input = btn.parentElement.querySelector('input');
-        var preco = btn.parentElement.querySelector('.produto__preco');
-        const idProduto = btn.parentElement.dataset.idproduto;
-        input.value = parseInt(input.value) + 1; // altera input
-        // procura no arraySacola se já adicionou produto
-        const itemCarrinho = arraySacola.find(item => item.id === idProduto);
-            if (itemCarrinho) {
-                itemCarrinho.quant = input.value;
-                return;
-            }
-            else{
-                itemCompra = new Object();
-                itemCompra.id = idProduto;
-                itemCompra.quant = input.value;
-                itemCompra.preco = (preco.textContent).match(numberPattern).join('');
-                arraySacola.push(itemCompra)
-            }
-        checaArraySacola(arraySacola)
+        botaoMais(arraySacola, btn)
     })
 })
 
 delBtn.forEach(btn=>{
-    btn.addEventListener('click', function(){ 
-        var input = btn.parentElement.querySelector('input');
-        const idProduto = btn.parentElement.dataset.idproduto;
-        if (input.value > 0) {
-            input.value = input.value - 1;
-            const itemCarrinho = arraySacola.find(item => item.id === idProduto);
-            if (itemCarrinho) {
-                itemCarrinho.quant = input.value;
-                return;
-            }
-        }
-        if (input.value == 0) {
-            console.log("zero")
-        }
-    checaArraySacola(arraySacola)
+    btn.addEventListener('click', function(){
+        botaoMenos(arraySacola, btn)
     })
 })
 
+function botaoMais(array, botao){
+    var input = botao.parentElement.querySelector('input');
+    var preco = botao.parentElement.querySelector('.produto__preco');
+    const idProduto = botao.parentElement.dataset.idproduto;
+    input.value = parseInt(input.value) + 1; // altera input
+    // procura no arraySacola se já adicionou produto
+    const itemCarrinho = array.find(item => item.id === idProduto);
+        if (itemCarrinho) {
+            itemCarrinho.quant = input.value;
+        }
+        else{
+            itemCompra = new Object();
+            itemCompra.id = idProduto;
+            itemCompra.quant = input.value;
+            itemCompra.preco = (preco.textContent).match(numberPattern).join('');
+            array.push(itemCompra)
+        }
+    checaArraySacola(array)
+};
+
+function botaoMenos(array, botao){
+    var input = botao.parentElement.querySelector('input');
+    const idProduto = botao.parentElement.dataset.idproduto;
+    if (input.value > 0) {
+        input.value = input.value - 1;
+        var itemCarrinho = array.find(item => item.id === idProduto);
+        if (itemCarrinho) {
+            itemCarrinho.quant = input.value;
+        }
+    }
+        for( var i = 0; i < array.length; i++){ //deletando item do array
+            if ( array[i].quant == 0) {
+                array.splice(i, 1); 
+            }            
+        }           
+    checaArraySacola(array)
+};
 
 function checaArraySacola(sacola) {
     var sacolaIcon = document.getElementById('itensSacola');
     sacolaIcon.textContent = sacola.length;
-    console.log(sacola.length)
     if(sacola.length > 0){
         document.querySelector('.itens-sacola').style.display = "flex";
     }
+    else{document.querySelector('.itens-sacola').style.display = "none";}
 }
 

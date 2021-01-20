@@ -7,7 +7,7 @@ var itensSacola = document.getElementById('itensSacola')
 sacolaBtn.addEventListener('click', function() {
     /*document.getElementById("modalSacola").classList.add("modal-sacola")*/
     document.querySelector(".modal-sacola").style.right = "0";
-    setTimeout(() => {document.getElementById("modalOverlaySacola").classList.add("modal-overlay"); }, 150);   
+    setTimeout(() => {document.getElementById("modalOverlaySacola").classList.add("modal-overlay"); }, 150);  
 });
 
 sacolaIcon.addEventListener('click', function(){

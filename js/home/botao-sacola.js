@@ -7,6 +7,7 @@ sacolaBtn.addEventListener('click', function(){
     })
     criaItensSacola(arraySacola);
     calculaTotalSacola();
+    alteraQtdSacola();
 })
 
 function criaItensSacola(array){
