@@ -63,7 +63,9 @@ function criaItensSacola(array){
         menosBtn.textContent = '-';
         maisBtn.textContent = '+';
         delIcon.src = "../img/lixeirinha-icon.png";
-        produtos.forEach(produto=>{
+
+        // usando a Oferta do Dia
+        ofertaDoDia.itemOferta.forEach(produto=>{
             if(produto.id == item.id){
                 img.src = produto.foto;
                 titulo.textContent = produto.nome;
@@ -77,6 +79,22 @@ function criaItensSacola(array){
             }
             preco.textContent = 'R$ ' + (parseInt(quant.value) * precoProduto).toFixed(2);
         })
+        
+        // usando os produtos
+        /*produtos.forEach(produto=>{
+            if(produto.id == item.id){
+                img.src = produto.foto;
+                titulo.textContent = produto.nome;
+                unTipo = produto.unTipo;
+                unVenda = produto.unVenda;
+                if(unVenda < 1 && unTipo == "kg") {
+                    unVenda = parseFloat(unVenda) * 1000
+                    unTipo = "g"
+                }
+                unQuant.textContent = (unVenda * quant.value) + " " + unTipo;
+            }
+            preco.textContent = 'R$ ' + (parseInt(quant.value) * precoProduto).toFixed(2);
+        })*/
 
         divSacola.appendChild(divProduto);
         divProduto.appendChild(img);

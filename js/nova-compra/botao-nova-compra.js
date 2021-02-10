@@ -32,8 +32,10 @@ function novaCompra() {
             // colocando os dados nos elementos
             nomeCompra.innerHTML = "Nova Compra";
             dataCompra.innerHTML = pegaDiaHoraAtual('dia');
-            dataCompraDados.value = pegaDiaHoraAtual('dia');
-            horaCompra.value = pegaDiaHoraAtual('hora');
+            //dataCompraDados.value = pegaDiaHoraAtual('dia');
+            //horaCompra.value = pegaDiaHoraAtual('hora');
+            dataCompraDados.value = "--/--/--";
+            horaCompra.value = "--:--";
             novaCompra.setAttribute('data-idcompra', 'nova-compra');
 
             // append childs

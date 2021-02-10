@@ -1,19 +1,7 @@
 function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a classe negrito
     limpaNegrito();
     limpaTabela();
-    compraDaVez.classList.add("compra-fornecedor-selecionada"); // coloca em negrito
-
-    // aqui deve fazer uma request para acessar as compras no banco        
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('GET', "endereço http");
-    // xhr.addEventListener('load', function(){
-    //     if(xhr.status == 200) {
-    //         var resposta = xhr.responseText; // a resposta vem no formato string
-    //         var arrayCompras = JSON.parse(resposta) // transformando em json
-    //         //arrayCompras.forEach (item => {
-    //         //  adicionaCompra(item)
-    //    } else{console.log("xmlhttp em desenvolvimento"); console.log(xhr.status)}
-    // });           
+    compraDaVez.classList.add("compra-fornecedor-selecionada"); // coloca em negrito        
     
     // confere id com tabela de compras
     const idCompra = compraDaVez.getAttribute('data-idcompra');
@@ -62,6 +50,11 @@ function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a cl
                 custoConteudo.step = "any";
                 custoConteudo.value = itemCompra.custo;
                 custo.appendChild(custoConteudo);
+
+                novoProduto.setAttribute('data-idProduto', itemCompra.id);
+                nome.textContent = itemCompra.nome;
+                imgConteudo.src = itemCompra.foto;
+                quantLabel.textContent = itemCompra.unTipo;
         
                 total.classList.add("produto-total");
                 //total.textContent = "0";
@@ -78,17 +71,8 @@ function populaTabelaCompras(compraDaVez){ // o elemento compraDaVez recebe a cl
                 novoProduto.appendChild(total);
                 novoProduto.appendChild(delBtn);
                 novoProduto.classList.add('produto-tr');
-                tabela.appendChild(novoProduto);
+                tabela.appendChild(novoProduto);            
 
-                // pegando nome e foto da tabela de produtos
-                produtos.forEach(produto=>{
-                    if(itemCompra.id == produto.id) {
-                        novoProduto.setAttribute('data-idProduto', produto.id);
-                        nome.textContent = produto.nome;
-                        imgConteudo.src = produto.foto;
-                        quantLabel.textContent = produto.unTipo;
-                    }
-                })
             })
 
             // dados da compra - coluna da direita

@@ -11,9 +11,6 @@ input.addEventListener('keyup', function(e){
     const termoDigitado = e.target.value.toUpperCase();
     Array.from(li).forEach(function(liProduto){
         const nomeProduto = liProduto.textContent;
-        // da pra melhorar esse if com uma expressão regular
-        // https://cursos.alura.com.br/course/javascript-programando-na-linguagem-web/task/24482
-        // var expressao = new RegExp(termoDigitado)
         if(nomeProduto.toUpperCase().indexOf(termoDigitado)!=-1){
             ul.style.display = "block";
             liProduto.style.display = "block";

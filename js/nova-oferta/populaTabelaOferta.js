@@ -40,6 +40,12 @@ function populaTabelaOferta(idCompra){
                 lucro.appendChild(lucroInput);
                 lucroInput.value = "35"
 
+                novoProduto.setAttribute('data-idProduto', itemCompra.id);
+                nome.textContent = itemCompra.nome;
+                imgConteudo.src = itemCompra.foto;
+                unVenda.textContent = itemCompra.unVenda;
+                preco.textContent = itemCompra.custo*itemCompra.unVenda*1.35;
+
                 quant.classList.add('pr-quant');
                 custo.classList.add('pr-custo'); 
                 lucroInput.classList.add('pr-lucro');
@@ -65,17 +71,7 @@ function populaTabelaOferta(idCompra){
                 novoProduto.classList.add('produto-tr');
                 tabela.appendChild(novoProduto);
                 novoProduto.setAttribute('data-idcompra', idCompra);
-
-                // pegando nome e foto da tabela de produtos
-                produtos.forEach(produto=>{
-                    if(itemCompra.id == produto.id) {
-                        novoProduto.setAttribute('data-idProduto', produto.id);
-                        nome.textContent = produto.nome;
-                        imgConteudo.src = produto.foto;
-                        unVenda.textContent = produto.unVenda;
-                        preco.textContent = itemCompra.custo*produto.unVenda*1.35;
-                    }
-                })
+              
             })
 
             // dados da compra - coluna da direita

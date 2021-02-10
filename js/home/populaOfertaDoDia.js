@@ -23,25 +23,24 @@ function criaItemOferta(oferta) {
         var btnAdd = document.createElement('button');
 
         novoProduto.setAttribute('data-idproduto', item.id);
+
         preco.textContent = "R$ " + (item.preco).toFixed(2);
-        produtos.forEach(produto=>{
-            if(produto.id == item.id) {
-                img.src = produto.foto;
-                titulo.textContent = produto.nome;
-                var unTipo = produto.unTipo;
-                var unVendaProduto = produto.unVenda
-                if (unVendaProduto < 1 && unTipo == "kg"){
-                    unVendaProduto = unVendaProduto * 1000
-                    unTipo = "g"
-                }
-                unVenda.textContent = unVendaProduto + " " + unTipo;
-                btnAdd.textContent = "+"
-                btnDel.textContent = "-"
-                input.value = 0;
-            }
-        })
+        img.src = item.foto;
+        titulo.textContent = item.nome;
+        var unTipo = item.unTipo;
+        var unVendaProduto = item.unVenda
+        if (unVendaProduto < 1 && unTipo == "kg"){
+            unVendaProduto = unVendaProduto * 1000
+            unTipo = "g"
+        }
+        unVenda.textContent = unVendaProduto + " " + unTipo;
+        btnAdd.textContent = "+"
+        btnDel.textContent = "-"
+        input.value = 0;
+
         novoProduto.classList.add('produto');
         img.classList.add('produto__img');
+        
         //console.log(divProdutos)
         titulo.classList.add('produto__titulo');
         preco.classList.add('produto__preco');

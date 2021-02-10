@@ -1,5 +1,3 @@
-// recebido pelo back do banco de dados
-// feito aqui apenas para testar o front
 const produtos = [
     {
         id: 01,
@@ -247,7 +245,7 @@ const produtos = [
         categ: "Fruta",
         foto: "../img/produtos/banana.png",
         unTipo: "Kg",
-        unVenda: 1,
+        unVenda: .5,
     },
     {
         id: 32,

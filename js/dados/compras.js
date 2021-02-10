@@ -6,10 +6,10 @@ const compras = [
         hora: "15:20",
         status: "Publicada",
         itemCompra: [
-            {id:35, quant:25, custo:5.90},
-            {id:34, quant:50, custo:2.30},
-            {id:39, quant:100, custo:10},
-            {id:31, quant:30, custo:7.90}
+            {id:35, nome: "Melão", quant:25, custo:5.90, foto: "../img/produtos/melao.png", unTipo: "Un", unVenda: 1},
+            {id:34, nome: "Melancia", quant:50, custo:2.30, foto: "../img/produtos/melancia.png", unTipo: "Un", unVenda: 1},
+            {id:39, nome: "Manga", quant:100, custo:10, foto: "../img/produtos/manga.png", unTipo: "kg", unVenda: 1},
+            {id:31, nome: "Banana prata", quant:30, custo:7.90, foto: "../img/produtos/banana.png", unTipo: "kg", unVenda: .5}
         ]
     },
     {
@@ -19,12 +19,12 @@ const compras = [
         hora: "17:37",
         status: "Publicada",
         itemCompra: [
-            {id:12, quant:35, custo:2.90},
-            {id:31, quant:10, custo:12},
-            {id:28, quant:53, custo:8.30},
-            {id:35, quant:25, custo:5.90},
-            {id:34, quant:50, custo:2.30},
-            {id:39, quant:100, custo:10}
+            {id:12, nome: "Inhame", quant:35, custo:2.90, foto: "../img/produtos/sem-foto.png", unTipo: "kg", unVenda: .6},
+            {id:31, nome: "Banana prata", quant:10, custo:12, foto: "../img/produtos/banana.png", unTipo: "kg", unVenda: .5},
+            {id:28, nome: "Manjericão", quant:53, custo:8.30, foto: "../img/produtos/sem-foto.png", unTipo: "Un", unVenda: 1},
+            {id:35, nome: "Melão", quant:25, custo:5.90, foto: "../img/produtos/melao.png", unTipo: "Un", unVenda: 1},
+            {id:34, nome: "Melancia", quant:50, custo:2.30, foto: "../img/produtos/melancia.png", unTipo: "Un", unVenda: 1},
+            {id:39, nome: "Manga", quant:100, custo:10, foto: "../img/produtos/manga.png", unTipo: "kg", unVenda: 1}
         ]
     },
     {
@@ -34,10 +34,10 @@ const compras = [
         hora: "18:27",
         status: "Publicada",
         itemCompra: [
-            {id:2, quant:35, custo:2.90},
-            {id:8, quant:53, custo:8.30},
-            {id:31, quant:30, custo:4.90},
-            {id:3, quant:10, custo:12}
+            {id:2, nome: "Pepino", quant:35, custo:2.90, foto: "../img/produtos/sem-foto.png", unTipo: "kg", unVenda: .3},
+            {id:8, nome: "Beterraba", quant:53, custo:8.30, foto: "../img/produtos/sem-foto.png", unTipo: "kg", unVenda: 1},
+            {id:31, nome: "Banana prata", quant:30, custo:4.90, foto: "../img/produtos/banana.png", unTipo: "kg", unVenda: .5},
+            {id:3, nome: "Repolho", quant:10, custo:12, foto: "../img/produtos/sem-foto.png", unTipo: "kg", unVenda: 1}
         ]
     }
 
