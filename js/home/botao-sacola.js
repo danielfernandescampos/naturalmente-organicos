@@ -1,6 +1,17 @@
 var sacolaBtn = document.querySelector('.sacolaBtn');
+var sacolaBtnIcon = document.querySelector('.sacolaBtnIcon');
 
 sacolaBtn.addEventListener('click', function(){
+    produtosSacola = document.querySelectorAll('.produto__sacola')
+    produtosSacola.forEach (item=>{
+        item.remove();
+    })
+    criaItensSacola(arraySacola);
+    calculaTotalSacola();
+    alteraQtdSacola();
+})
+
+sacolaBtnIcon.addEventListener('click', function(){
     produtosSacola = document.querySelectorAll('.produto__sacola')
     produtosSacola.forEach (item=>{
         item.remove();

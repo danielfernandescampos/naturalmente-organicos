@@ -1,0 +1,402 @@
+[
+    {
+        "id": "01",
+        "nome": "Abobrinha",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".5"
+    },
+    {
+        "id": "02",
+        "nome": "Pepino",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".3"
+    },
+    {
+        "id": "03",
+        "nome": "Repolho",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "04",
+        "nome": "Abóbora",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "05",
+        "nome": "Batata Inglesa",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "06",
+        "nome": "Batata Doce",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "07",
+        "nome": "Cebola",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "08",
+        "nome": "Beterraba",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "09",
+        "nome": "Cenoura",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".5"
+    },
+    {
+        "id": "10",
+        "nome": "Chuchu",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".5"
+    },
+    {
+        "id": "11",
+        "nome": "Tomate",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".5"
+    },
+    {
+        "id": "12",
+        "nome": "Inhame",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "13",
+        "nome": "Alho",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".1"
+    },
+    {
+        "id": "14",
+        "nome": "Aipim",
+        "categ": "Legume",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "kg",
+        "unVenda": ".6"
+    },
+    {
+        "id": "15",
+        "nome": "Agrião",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "16",
+        "nome": "Alface",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "17",
+        "nome": "Couve",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "18",
+        "nome": "Espinafre",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "19",
+        "nome": "Rúcula",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "20",
+        "nome": "Brócolis",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "21",
+        "nome": "Couve-flor",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "22",
+        "nome": "Chicória",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "23",
+        "nome": "Acelga",
+        "categ": "Verdura",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "24",
+        "nome": "Alho poró",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "25",
+        "nome": "Coentro",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "26",
+        "nome": "Hortelã",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "27",
+        "nome": "Louro",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "28",
+        "nome": "Manjericão",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "29",
+        "nome": "Cheiro verde",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "30",
+        "nome": "Orégano",
+        "categ": "Tempero",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "31",
+        "nome": "Banana prata",
+        "categ": "Fruta",
+        "foto": "../img/produtos/banana.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "32",
+        "nome": "Abacate",
+        "categ": "Fruta",
+        "foto": "../img/produtos/abacate.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "33",
+        "nome": "Laranja",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "34",
+        "nome": "Melancia",
+        "categ": "Fruta",
+        "foto": "../img/produtos/melancia.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "35",
+        "nome": "Melão",
+        "categ": "Fruta",
+        "foto": "../img/produtos/melao.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "36",
+        "nome": "Maçã",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "37",
+        "nome": "Limão",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "38",
+        "nome": "Maracujá",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "39",
+        "nome": "Manga",
+        "categ": "Fruta",
+        "foto": "../img/produtos/manga.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "40",
+        "nome": "Abacaxi",
+        "categ": "Fruta",
+        "foto": "../img/produtos/abacaxi.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "41",
+        "nome": "Morango",
+        "categ": "Fruta",
+        "foto": "../img/produtos/morango.png",
+        "unTipo": "Cx",
+        "unVenda": "1"
+    },
+    {
+        "id": "42",
+        "nome": "Tangerina",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": ".5"
+    },
+    {
+        "id": "43",
+        "nome": "Goiaba",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "44",
+        "nome": "Mamão",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "45",
+        "nome": "Jabuticaba",
+        "categ": "Fruta",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Kg",
+        "unVenda": "1"
+    },
+    {
+        "id": "46",
+        "nome": "Bolo de cenoura",
+        "categ": "Mercearia",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "47",
+        "nome": "Bolo de banana",
+        "categ": "Mercearia",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "48",
+        "nome": "Bolo de laranja",
+        "categ": "Mercearia",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "49",
+        "nome": "Empadão",
+        "categ": "Mercearia",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    },
+    {
+        "id": "50",
+        "nome": "Geléia",
+        "categ": "Mercearia",
+        "foto": "../img/produtos/sem-foto.png",
+        "unTipo": "Un",
+        "unVenda": "1"
+    }
+]
